@@ -347,6 +347,104 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# JUMBOTRON
+--------------------------------------------------------------*/
+.jumbotron-potensi{
+  /* margin-top: 100px; */
+  margin-top: -60px;
+  height: 350px;
+  background-image: url(../img/potensi/jumbotron-potensi-asli.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: -90px -1170px;
+  width: 100%;
+}
+
+.jumbotron-potensi::after{
+  content: " ";
+  width: 100%;
+  height: inherit;
+  background-color: #0c3b2e91;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: rgba(20, 20, 20, .5); */
+}
+
+.jumbotron h1{
+  font-weight: bold;
+  color: #FFBA00;
+  margin-top: 200px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+POTENSI.HTML section potensi
+--------------------------------------------------------------*/
+.potensi{
+  margin-bottom: 200px;
+}
+
+.potensi-wilayah{
+  margin: 50px 0;
+  padding: 30px;
+}
+
+.potensi-wilayah.berwarna{
+  background-color: #6097737b;
+  border-radius: 20px;
+}
+
+.potensi-wilayah img{
+  width: 100%;
+}
+
+.potensi-wilayah h2, p{
+  color: #0C3B2E;;
+}
+
+.potensi a{
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+POTENSI-WILAYAH.HTML section potensi
+--------------------------------------------------------------*/
+.potensi-wilayah-batas h1, .potensi-wilayah-batas img{
+  text-align: center;
+}
+
+.potensi-wilayah-batas{
+  color: #0C3B2E;
+}
+
+.potensi-wilayah-batas h1{
+  margin: 10px 0 40px;
+  font-weight: bold;
+}
+.potensi-wilayah-batas img{
+  width: 100%;
+}
+.card.potensi-wilayah-batas img{
+  padding: 10px 0;
+}
+
+.card.potensi-wilayah-batas{
+  margin: 15px;
+}
+
+.potensi-wilayah-batas h5{
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
@@ -678,7 +776,7 @@ section {
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #fffffff;
+  color: #ffffff;
   position: relative;
   padding-bottom: 12px;
 }
