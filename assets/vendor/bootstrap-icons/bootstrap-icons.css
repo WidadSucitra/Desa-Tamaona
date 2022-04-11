@@ -4,6 +4,10 @@
 url("./fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d") format("woff");
 }
 
+.bi.panah::before{
+  font-size: 10px;
+}
+
 .bi::before,
 [class^="bi-"]::before,
 [class*=" bi-"]::before {
