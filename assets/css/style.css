@@ -388,6 +388,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+POTENSI-WISATA.HTML
+--------------------------------------------------------------*/
+#potensiwisata h3 {
+  text-align: center;
+  color: #0C3B2E;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#potensiwisata h4 {
+  text-align: left;
+  color: #609773;
+  font-size: 28px;
+}
+
+#potensiwisata img {
+  transition: all ease-in-out 0.4s;
+}
+#potensiwisata img:hover {
+    transform: scale(1.1);
+}
+
+#potensiwisata p {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
 STATISTIK.HTML
 --------------------------------------------------------------*/
 .statistik .statistik-penduduk .col-md-3{
@@ -510,25 +538,25 @@ PANEL section
 /*--------------------------------------------------------------
 POTENSI.HTML section potensi
 --------------------------------------------------------------*/
-.potensi{
+.potensi, .komoditi{
   margin-bottom: 200px;
 }
 
-.potensi-wilayah{
+.potensi-wilayah, .potensi-komoditi{
   margin: 50px 0;
   padding: 30px;
 }
 
-.potensi-wilayah.berwarna{
+.potensi-wilayah.berwarna, .potensi-komoditi.berwarna{
   background-color: #6097737b;
   border-radius: 20px;
 }
 
-.potensi-wilayah img{
+.potensi-wilayah img, .potensi-komoditi img{
   width: 100%;
 }
 
-.potensi-wilayah h2, p{
+.potensi-wilayah h2, p, .potensi-komoditi h2{
   color: #0C3B2E;;
 }
 
