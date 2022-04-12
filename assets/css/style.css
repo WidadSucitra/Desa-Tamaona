@@ -387,7 +387,55 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
 
+.gallery {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.gallery .card-img-top {
+  transition: all ease-in-out 0.4s;
+}
+.gallery .card-img-top:hover {
+  transform: scale(1.1);
+}
+
+/*------------------
+PANEL section
+---------------------*/
+.info-panel{
+  background-color: #609773;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .5);
+  border-radius: 12px;
+  margin-top: 120px;
+  padding: 30px;
+}
+
+.info-panel img{
+  width: 80px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  color: #FFBA00;
+}
+
+.info-panel h4{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  margin left: 20%;
+}
+
+/* .info-panel p{
+  font-size: 16px;
+  font-weight: 200;
+  color: #ffffff;
+  margin: -5px 50px 50px 5px;
+} */
 
 /*--------------------------------------------------------------
 POTENSI.HTML section potensi
@@ -586,7 +634,7 @@ SARANA.HTML
 #hero {
   width: 100%;
   height: 90vh;
-  background: url("../img/hero-bgr.jpg") top center;
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url("../img/hero-bgr.jpg") top center;
   background-size: cover;
   margin-bottom: -200px;
 }
@@ -740,6 +788,235 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Visi Misi
+--------------------------------------------------------------*/
+/* 
+.vismis .container h2{
+  text-align: center;
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: 0em;
+  margin: 50px 0 0 30px;
+}
+.vismis .member {
+  margin: 70px 50px 50px 50px;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
+  padding: 30px 50px;
+  border-radius: 10px;
+  width: 500px;
+  height: 560px;
+}
+/* .vismis .pic {
+  align-items: center;
+  overflow: hidden;
+  margin: 50px;
+  width: 100%;
+  border-radius: 0;
+} */
+
+.vismis .member .pic img {
+  transition: ease-in-out 0.3s;
+}
+.vismis .member:hover img {
+  transform: scale(1.1);
+}
+.vismis .member .member-info {
+  padding-left: 30px;
+}
+.vismis .member .h4 {
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-weight: 700;
+  color: #0C3B2E;
+}
+.vismis .member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+.vismis .member span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #b2c8dd;
+  bottom: 0;
+  left: 0;
+}
+.vismis .member p {
+  margin: 10px 0 0 0;
+  font-size: 15px;
+} */
+
+
+/*--------------------------------------------------------------
+# profile
+--------------------------------------------------------------*/
+
+.profile {
+  margin: 0px;
+}
+.profile .icon-boxes h4 {
+  font-size: 18px;
+  color: #609773;
+  margin-bottom: 15px;
+}
+.profile .icon-boxes h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0C3B2E;
+  margin-bottom: 15px;
+}
+.profile .icon-box {
+  margin-top: 40px;
+}
+.profile .icon-box .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #609773;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.profile .icon-box .icon i {
+  color: #609773;
+  font-size: 32px;
+}
+.profile .icon-box:hover .icon {
+  background: #609773;
+  border-color: #609773;
+}
+.profile .icon-box:hover .icon i {
+  color: #fff;
+}
+.profile .icon-box .title {
+  margin-left: 85px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.profile .icon-box .title a {
+  color: #0C3B2E;
+  transition: 0.3s;
+}
+.profile .icon-box .title a:hover {
+  color: #609773;
+}
+.profile .icon-box .description {
+  margin-left: 85px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+#profile .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 5px 0 0 8px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #609773;
+}
+#profile .btn-get-started:hover {
+  background: #0C3B2E;
+}
+
+#profile .img-fluid {
+  margin-top: 10%;
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sisper
+--------------------------------------------------------------*/
+.sisper {
+  background-color: #ffffff;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.sisper .img {
+  width: 100%;
+}
+
+.sisper .word{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  padding-top: 50px;
+}
+
+@media (max-width: 992px) {
+  .sisper .nav-link {
+    border: 0;
+    padding: 15px;
+  }
+  .sisper .nav-link.active {
+    color: #fff;
+    background: #609773;
+  }
+}
+
+/*--------------------------------------------------------------
+# Location
+--------------------------------------------------------------*/
+.pin {
+  width: 100%;
+  padding: 30px 25px 25px 30px;
+  background: #fff;
+}
+
+.pin h2 {
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* /* --------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
 
@@ -768,7 +1045,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-
+/*
 .about {
   margin: 0px;
 }
@@ -869,7 +1146,7 @@ section {
     transform: scale(1, 1);
     opacity: 0;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Footer
