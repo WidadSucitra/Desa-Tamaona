@@ -388,6 +388,76 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+STATISTIK.HTML
+--------------------------------------------------------------*/
+.statistik .statistik-penduduk .col-md-3{
+  background-color: #609773;
+  width: fit-content;
+  padding: 0 35px;
+  border-radius: 25px;
+  margin: 0 20px;
+}
+
+.statistik .statistik-penduduk img{
+  width: 100px;
+  margin: 0;
+}
+
+.statistik .statistik-penduduk .nilai{ 
+  width: 200px;
+  padding: 10px 25px 10px 10px;
+}
+
+.statistik .statistik-penduduk .row h5{
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0;
+}
+
+.statistik .statistik-penduduk .col{
+  padding: 0;
+}
+
+.statistik .statistik-penduduk p{
+  font-weight: bold;
+  margin: 0;
+  font-size: 8vh;
+  line-height: 100px;
+  height: 100px;
+  width: fit-content;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.statistik .daftar-dusun table{
+  margin: auto;
+  margin-top: 40px;
+}
+
+.statistik .daftar-dusun th, .statistik .daftar-dusun td{
+  border: solid black 1px;
+  padding: 10px;
+}
+
+.statistik .daftar-dusun th:nth-child(2), .statistik .daftar-dusun td:nth-child(2){
+  border: solid black 1px;
+  padding: 10px;
+  width: 60%;
+}
+
+.statistik .daftar-dusun th:nth-child(3), .statistik .daftar-dusun td:nth-child(3){
+  border: solid black 1px;
+  padding: 10px;
+  text-align: center;
+}
+
+.statistik .daftar-dusun th{
+  background-color: yellow;
+}
+
+/* -----------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
 
@@ -509,7 +579,7 @@ SARANA.HTML
   padding: 0;
 }
 
-.potensi.sarana #masjid{
+.potensi.sarana #masjid, .statistik .daftar-dusun{
   margin-bottom: 0;
 }
 .sarana .content{
@@ -598,7 +668,7 @@ SARANA.HTML
   color: rgb(8, 49, 130);
 }
 
-#sekolah,#masjid{
+#sekolah,#masjid, .status-perkawinan, .daftar-dusun{
   margin: 100px 0;
   background-color: #fff;
   padding: 50px 0 100px;
@@ -1049,6 +1119,7 @@ section {
   transition: 0.5s;
   color: #fff;
   background: #609773;
+  width: fit-content;
 }
 #profile .btn-get-started:hover {
   background: #0C3B2E;
