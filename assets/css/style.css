@@ -388,6 +388,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+POTENSI-WISATA.HTML
+--------------------------------------------------------------*/
+#potensiwisata h3 {
+  text-align: center;
+  color: #0C3B2E;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#potensiwisata h4 {
+  text-align: left;
+  color: #609773;
+  font-size: 28px;
+}
+
+#potensiwisata img {
+  transition: all ease-in-out 0.4s;
+}
+#potensiwisata img:hover {
+    transform: scale(1.1);
+}
+
+#potensiwisata p {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
 STATISTIK.HTML
 --------------------------------------------------------------*/
 .statistik .statistik-penduduk .col-md-3{
