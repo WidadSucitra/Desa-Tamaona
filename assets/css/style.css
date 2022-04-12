@@ -8,6 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html{
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -440,10 +444,140 @@ POTENSI-WILAYAH.HTML section potensi
 
 .potensi-wilayah-batas h5{
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 20px;
   text-align: center;
 }
 
+/*--------------------------------------------------------------
+SARANA.HTML
+--------------------------------------------------------------*/
+.potensi.sarana{
+  margin-bottom: 0;
+}
+
+.sarana-prasarana{
+  padding: 0;
+}
+
+.potensi.sarana #masjid{
+  margin-bottom: 0;
+}
+.sarana .content{
+  width: 300px;
+  background: black;
+  overflow: hidden;
+  position: relative;
+}
+
+.sarana img{
+  max-width: 100%;
+  /* display: none; */
+  /* box-shadow: 2px 2px 20px #949090bc; */
+}
+
+.sarana .content img{
+  transform: scale(1.3);
+  transition: all 0.3s ease-out ;
+}
+
+.sarana .content:hover img{
+  transform: scale(1.1) translateY(-20px);
+  opacity: 0.3;
+}
+
+.sarana .desc{
+  position: absolute;
+  left: 0;
+  bottom: 22%;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.sarana .desc h3, .sarana .desc p{
+  color: #FFBA00;
+}
+
+.sarana .btn{
+  background-color: #0C3B2E;
+}
+
+.sarana-kantor .content  h3, 
+.sarana .content  p, 
+.sarana .content  .btn{
+  opacity: 0   ;
+}
+
+.sarana-kantor .content:hover h3, 
+.sarana .content:hover p, 
+.sarana .content:hover .btn{
+  opacity: 1   ;
+}
+
+
+.sarana a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.sarana .btn:hover{
+  background-color: #609773;
+}
+
+/* SWIPE */
+.swiper.sarana {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+.swiper-wrapper{
+  width: 90%;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+
+.swiper-button-next:hover,.swiper-button-prev:hover{
+  opacity:1;
+  color: rgb(8, 49, 130);
+}
+
+#sekolah,#masjid{
+  margin: 100px 0;
+  background-color: #fff;
+  padding: 50px 0 100px;
+}
+
+#sekolah img{
+  width: 100%;
+  margin-top: 70px;
+}
+
+#masjid .card{
+  background-color: #609773;
+}
+
+#masjid .card h5, #masjid .card p{
+  color: #fff;
+}
+
+.sarana #masjid .btn{
+  background-color: #FFBA00;
+}
+
+.sarana #masjid .btn:hover{
+  background-color: #eeff6e;
+}
+
+.sarana #masjid a{
+    color: #0C3B2E;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
