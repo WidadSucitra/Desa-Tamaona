@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(images/login\ 1.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 1px,1px,5px black;
+    padding: 40px 30px;
+    position: relative;
+    border-radius: 0 90px 90px 0;
+}
+
+.container1{
+    width: 50%;
+    min-height: 100vh;
+    background-color: #6D9773;
+    box-shadow: 1px,1px,5px black;
+    padding: 40px 30px;
+    position: relative;
+    border-radius: 0 90px 90px 0;
+}
+
+.container ul{
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    color: #0c3b2e;
+}
+
+.container ul li{
+    list-style: none;
+    display: inline;
+}
+
+.container ul li a{
+    text-decoration: none;
+    color: #0c3b2e;
+    @media(max-width:430px) {
+        .container {
+            width:430px
+        }
+    }
+}
+
+.container ul li a:hover{
+    color: #ffba00;
+}
+
+.container1 ul{
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    color: #0c3b2e;
+}
+
+.container1 ul li{
+    list-style: none;
+    display: inline;
+}
+
+.container1 ul li a{
+    text-decoration: none;
+    color: #0c3b2e;
+    @media(max-width:430px) {
+        .container {
+            width:430px
+        }
+    }
+}
+
+.container1 ul li a:hover{
+    color: #ffba00;
+}
+
+.container .register-email .register-text{
+    margin-bottom: 20px;
+    color: #0c3b2e;
+}
+
+.container .register-email .start-text{
+    margin-top: 60px;
+    color: #d8943bc4;
+}
+
+.container1 .login-email .login-text{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    color: #0c3b2e;
+}
+
+.container1 .login-email .login-text span{
+    color: #D8933B;
+}
+
+.container .register-email .login-register-text{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #6D9773;
+}
+
+.container1 .login-email .login-register-text{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.container .register-email .input-group{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+.container1 .login-email .input-group{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+/*ubah kotak  justify-content: space-around;*/
+.container .register-email .input-group input{
+    width: 100%;
+    height: 100%;
+    border: 2px;
+    background: #E5E5E5;
+    padding: 15px 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: .3s;
+}
+
+.container1 .login-email .input-group input{
+    width: 100%;
+    height: 100%;
+    border: 2px;
+    background: #E5E5E5;
+    padding: 15px 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: .3s;
+}
+
+.container .register-email .input-group input:focus, .container .register-email .input-group input:valid{
+    border: #3e36ad;
+}
+
+.container1 .login-email .input-group input:focus, .container1 .login-email .input-group input:valid{
+    border: #3e36ad;
+}
+
+.container .register-email .input-group .btn{
+   display: block;
+   margin: auto;
+   width: 30%;
+   padding: 15px 20px;
+   text-align: center;
+   border: none;
+   background: #0c3b2e;
+   outline: none;
+   border-radius: 30px;
+   font-size: 1rem;
+   color: #fff;
+   cursor: pointer;
+   transition: .3s; 
+}
+
+.container1 .login-email .input-group .btn{
+    display: block;
+    margin: auto;
+    width: 30%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #0c3b2e;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    color: #ffba00;
+    cursor: pointer;
+    transition: .3s; 
+ }
+
+.container .register-email .input-group .btn:hover{
+    transform: translate(-5px);
+    background: #bb8a52;
+}
+
+.container1 .login-email .input-group .btn:hover{
+    transform: translate(-5px);
+    background: #bb8a52;
+}
+
+.login-register-text{
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-register-text a{
+    text-decoration: none;
+    color: #ffba00;
+    @media(max-width:430px) {
+        .container {
+            width:430px
+        }
+    }
+}
+
+.login-register-text a:hover {
+    color: #0c3b2e;
+}
+
+input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ffba00;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    transition: .3s;
+}
