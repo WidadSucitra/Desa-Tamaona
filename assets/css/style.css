@@ -1119,6 +1119,7 @@ section {
   transition: 0.5s;
   color: #fff;
   background: #609773;
+  width: fit-content;
 }
 #profile .btn-get-started:hover {
   background: #0C3B2E;
