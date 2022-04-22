@@ -4,8 +4,16 @@
 url("./fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d") format("woff");
 }
 
-.bi.panah::before{
+#header .bi.panah::before,
+#header [class^="bi- panah"]::before,
+#header [class*=" bi- panah"]::before{
   font-size: 10px;
+}
+
+#header .bi::before,
+#header [class^="bi-"]::before,
+#header [class*=" bi-"]::before {
+  font-size: xx-large;
 }
 
 .bi::before,
