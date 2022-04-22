@@ -423,7 +423,7 @@ STATISTIK.HTML
   width: fit-content;
   padding: 0 35px;
   border-radius: 25px;
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 
 .statistik .statistik-penduduk img{
@@ -483,6 +483,12 @@ STATISTIK.HTML
 
 .statistik .daftar-dusun th{
   background-color: yellow;
+}
+
+@media (min-width: 992px) {
+  .statistik .statistik-penduduk .col-md-3{
+    margin: 0 20px;
+  }
 }
 
 /* -----------------------------------------------------------
@@ -610,12 +616,6 @@ SARANA.HTML
 .potensi.sarana #masjid, .statistik .daftar-dusun{
   margin-bottom: 0;
 }
-.sarana .content{
-  width: 300px;
-  background: black;
-  overflow: hidden;
-  position: relative;
-}
 
 .sarana img{
   max-width: 100%;
@@ -623,44 +623,11 @@ SARANA.HTML
   /* box-shadow: 2px 2px 20px #949090bc; */
 }
 
-.sarana .content img{
-  transform: scale(1.3);
-  transition: all 0.3s ease-out ;
-}
-
-.sarana .content:hover img{
-  transform: scale(1.1) translateY(-20px);
-  opacity: 0.3;
-}
-
-.sarana .desc{
-  position: absolute;
-  left: 0;
-  bottom: 22%;
-  width: 100%;
-  padding: 15px;
-  text-align: center;
-}
-
-.sarana .desc h3, .sarana .desc p{
-  color: #FFBA00;
-}
-
 .sarana .btn{
   background-color: #0C3B2E;
 }
 
-.sarana-kantor .content  h3, 
-.sarana .content  p, 
-.sarana .content  .btn{
-  opacity: 0   ;
-}
 
-.sarana-kantor .content:hover h3, 
-.sarana .content:hover p, 
-.sarana .content:hover .btn{
-  opacity: 1   ;
-}
 
 
 .sarana a{
@@ -672,29 +639,7 @@ SARANA.HTML
   background-color: #609773;
 }
 
-/* SWIPE */
-.swiper.sarana {
-  width: 100%;
-  height: 100%;
-  padding: 50px;
-}
 
-.swiper-wrapper{
-  width: 90%;
-}
-
-.swiper-pagination-bullet{
-  height: 7px;
-  width: 26px;
-  border-radius: 25px;
-  background-color: #fff;
-}
-
-
-.swiper-button-next:hover,.swiper-button-prev:hover{
-  opacity:1;
-  color: rgb(8, 49, 130);
-}
 
 #sekolah,#masjid, .status-perkawinan, .daftar-dusun{
   margin: 100px 0;
@@ -746,7 +691,7 @@ EVENT.HTML
 
 .event .search_wrap .search_box{
 	position: relative;
-	width: 500px;
+	width: 70%;
 	height: 60px;
   border: #6D9773;
 }
