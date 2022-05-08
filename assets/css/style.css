@@ -1549,7 +1549,102 @@ PENGADUAN.HTML
 /*--------------------------------------------------------------
 FORM-PENGADUAN.HTML
 --------------------------------------------------------------*/
+.laporan{
+  box-sizing: border-box;
+  margin: 0;
+  background: #6D9773;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 10px;
+  margin-top: -100px;
+}
 
+.laporan .container{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 450px;
+  min-width: 370px;
+  margin-top: 50px;
+}
+
+.laporan .card-container{
+  padding-bottom: 30px;
+}
+
+
+.laporan table{
+  margin: auto;
+  margin-top: 50px;
+}
+
+.laporan .tbl-laporan tr td:first-child{
+  padding-right: 10px;
+}
+
+.laporan .tbl-laporan td.title{
+  font-size: 0.7rem;
+  color: #0C3B2E;
+}
+
+.laporan .tbl-laporan .nobg{
+  background-color: transparent;
+}
+
+.laporan .tbl-laporan td input, .laporan .tbl-laporan td textarea{
+  background-color: rgb(230, 230, 230);
+  color: #FFBA00;
+  border: none;
+  padding: 6px 4px;
+  margin: 8px 0;
+  width: 100%;
+  font-size: 0.6rem;
+}
+
+.laporan .tbl-laporan td input::placeholder{
+  color: #0C3B2E;
+}
+
+.laporan .tbl-laporan td textarea::placeholder{
+  color: #0C3B2E;
+}
+
+.laporan .tbl-laporan td input:focus, .laporan .tbl-laporan td textarea:focus{
+  outline: 1px solid #FFBA00;
+}
+
+.laporan button.kirim{
+  border-radius: 20px;
+  border: 1px solid #6D9773;
+  background-color: #6D9773;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-out;
+  cursor: pointer;
+  margin-left: 35%;
+  margin-top: 20px;
+}
+
+.laporan button.kirim:hover{
+  opacity: 0.7;
+  background-color: #FFBA00;
+}
+
+@media (max-width:350px) {
+  .laporan table{
+    margin: 0;
+    margin-top: 50px;
+  }
+}
 /* ukuran desktop */
 @media (min-width:800px) {
   .laporan{
@@ -1566,7 +1661,7 @@ FORM-PENGADUAN.HTML
 
   .laporan .container{
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     overflow: hidden;
     width: 768px;
@@ -1576,21 +1671,70 @@ FORM-PENGADUAN.HTML
     margin-top: 50px;
   }
 
+  .laporan .card-container{
+    padding-bottom: 30px;
+  }
+
 
   .laporan table{
     margin: auto;
     margin-top: 50px;
-    
   }
+
+  .laporan .tbl-laporan tr td:first-child{
+    padding-right: 30px;
+  }
+
   .laporan .tbl-laporan td.title{
-    font-size: 13px;
+    font-size: 1rem;
     color: #0C3B2E;
   }
 
+  .laporan .tbl-laporan .nobg{
+    background-color: transparent;
+  }
+
+  .laporan .tbl-laporan td input, .laporan .tbl-laporan td textarea{
+    background-color: rgb(230, 230, 230);
+    color: #FFBA00;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .laporan .tbl-laporan td input::placeholder{
+    color: #0C3B2E;
+  }
+
+  .laporan .tbl-laporan td textarea::placeholder{
+    color: #0C3B2E;
+  }
+
+  .laporan .tbl-laporan td input:focus, .laporan .tbl-laporan td textarea:focus{
+    outline: 1px solid #FFBA00;
+  }
+
   .laporan button.kirim{
+    border-radius: 20px;
+    border: 1px solid #6D9773;
     background-color: #6D9773;
-    margin-left: 50%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-out;
+    cursor: pointer;
+    margin-left: 45%;
     margin-top: 20px;
+  }
+
+  .laporan button.kirim:hover{
+    opacity: 0.7;
+    background-color: #FFBA00;
   }
 }
 
