@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2022 at 04:39 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: May 13, 2022 at 01:45 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `akun`
+-- Database: `desa_tamaona`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +40,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (1, 'andibesseadya', 'adyaadias87@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-(2, 'andiadzanbintang', 'andiadzanbintang@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
+(2, 'andiadzanbintang', 'andiadzanbintang@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(3, 'citra', 'citra@gmail.com', ''),
+(4, 'citra', 'citra1@gmail.com', ''),
+(5, 'pia', 'pia@gmail.com', ''),
+(6, 'andiwidad', 'andiwidad@gmail.com', '');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
