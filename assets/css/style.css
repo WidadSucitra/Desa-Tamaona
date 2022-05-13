@@ -1105,9 +1105,24 @@ EVENT.HTML
 }
 
 .event .search_wrap.search_wrap_4 .search_box .input{
-  padding-left: 80px;
+  padding-left: 65px;
   background-color: #6D9773;
   color: #FFBA00;
+}
+
+/*support google chrome*/
+.event .search_wrap.search_wrap_4 .search_box .input::-webkit-input-placeholder{
+	font-size: 12px;
+}
+ 
+/*support mozilla*/
+.event .search_wrap.search_wrap_4 .search_box .input:-moz-input-placeholder{
+	font-size: 12px;
+}
+ 
+/*support internet explorer*/
+.event .search_wrap.search_wrap_4 .search_box .input:-ms-input-placeholder{
+	font-size: 12px;
 }
 
 .event .search_wrap.search_wrap_4 .search_box .input::-webkit-input-placeholder{
@@ -1185,6 +1200,23 @@ EVENT.HTML
   .event .search_wrap .search_box .btn:hover{
     background: #FFBA00;	
   }
+
+  
+/*support google chrome*/
+.event .search_wrap.search_wrap_4 .search_box .input::-webkit-input-placeholder{
+	font-size: 15px;
+  padding-left: 0;
+}
+ 
+/*support mozilla*/
+.event .search_wrap.search_wrap_4 .search_box .input:-moz-input-placeholder{
+	font-size: 15px;
+}
+ 
+/*support internet explorer*/
+.event .search_wrap.search_wrap_4 .search_box .input:-ms-input-placeholder{
+	font-size: 15px;
+}
   
   .event .search_wrap .search_box .btn.btn_common .fas{
     position: absolute;
@@ -1861,7 +1893,7 @@ FORM-PENGADUAN.HTML
     padding-bottom: 63px;
   }
   #hero h1 {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 36px;
   }
   #hero h2 {
