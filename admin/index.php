@@ -6,7 +6,7 @@ session_start();
 error_reporting(0);
 
 if(isset($_SESSION['username'])) {
-    header("Location: dashboard.php");
+    header("Location: dashboard/index.php");
 }
 
 if(isset($_POST['submit'])) {
@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
-		header("Location: dashboard.php");
+		header("Location: dashboard/index.php");
 	} else {
 		echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
 	}
