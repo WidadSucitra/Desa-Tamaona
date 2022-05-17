@@ -11,7 +11,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-  <a class="nav-link" href="dashboard.php">
+  <a class="nav-link" href="../dashboard/index.php">
     <i class="fas fa-fw fa-tachometer-alt"></i>
     <span>Dashboard</span></a>
 </li>
@@ -25,19 +25,19 @@
 </div>
 
 <li class="nav-item">
-  <a class="nav-link" href="admin-home.php">
+  <a class="nav-link" href="../admin-home/index.php">
     <i class="fas fa-fw fa-chart-area"></i>
     <span>Home</span></a>
 </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="admin-statistika.php">
+  <a class="nav-link" href="../admin-statistika/index.php">
     <i class="fas fa-fw fa-chart-area"></i>
     <span>Statistika</span></a>
 </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="admin-gallery.php">
+  <a class="nav-link" href="../admin-gallery/index.php">
     <i class="fas fa-fw fa-chart-area"></i>
     <span>Gallery</span></a>
 </li>
@@ -50,48 +50,48 @@
   </a>
   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-    <a class="collapse-item" href="admin-potensi.php">Potensi</a>
+    <a class="collapse-item" href="../admin-potensi/index.php">Potensi</a>
       <h6 class="collapse-header">Potensi Desa:</h6>
-      <a class="collapse-item" href="admin-potensi-wilayah.php">Wilayah</a>
-      <a class="collapse-item" href="admin-potensi-sarana.php">Sarana</a>
-      <a class="collapse-item" href="admin-potensi-wisata.php">Wisata</a>
-      <a class="collapse-item" href="admin-potensi-komoditi.php">Komoditi</a>
+      <a class="collapse-item" href="../admin-potensi-wilayah/index.php">Wilayah</a>
+      <a class="collapse-item" href="../admin-potensi-sarana/index.php">Sarana</a>
+      <a class="collapse-item" href="../admin-potensi-wisata/index.php">Wisata</a>
+      <a class="collapse-item" href="../admin-potensi-komoditi/index.php">Komoditi</a>
     </div>
   </div>
 </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="admin-event.php">
+  <a class="nav-link" href="../admin-event/index.php">
     <i class="fas fa-fw fa-chart-area"></i>
     <span>Event</span></a>
 </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="admin-contact.php">
+  <a class="nav-link" href="../admin-contact/index.php">
     <i class="fas fa-fw fa-chart-area"></i>
     <span>Contact</span></a>
 </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="admin-pengaduan.php">
+  <a class="nav-link" href="../admin-pengaduan/index.php">
     <i class="fas fa-fw fa-chart-area"></i>
     <span>Pengaduan</span></a>
 </li>
 
 <!-- Divider -->
-<hr class="sidebar-divider">
+<!-- <hr class="sidebar-divider"> -->
 
 <!-- Heading -->
-<div class="sidebar-heading">
+<!-- <div class="sidebar-heading">
   User
-</div>
+</div> -->
 
 <!-- Nav Item - Tables -->
-<li class="nav-item">
-  <a class="nav-link" href="user.php">
+<!-- <li class="nav-item">
+  <a class="nav-link" href="../user.php">
     <i class="fas fa-fw fa-table"></i>
     <span>Admin</span></a>
-</li>
+</li> -->
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">

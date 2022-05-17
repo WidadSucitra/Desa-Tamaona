@@ -4857,6 +4857,22 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
+
+/*--------------------------------------------------------------
+POTENSI.HTML
+--------------------------------------------------------------*/
+.admin-potensi form .nobg{
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
 .card {
   position: relative;
   display: -webkit-box;

@@ -1,6 +1,8 @@
 <?php
-include('includes/header.php'); 
-include('includes/navbar.php'); 
+include "../config.php";
+include "../includes/header.php"; 
+include "../includes/navbar.php"; 
+
 ?>
 
         <!-- Begin Page Content -->
@@ -16,6 +18,6 @@ include('includes/navbar.php');
       <!-- End of Main Content -->
 
 <?php
-include('includes/scripts.php');
-include('includes/footer.php');
+include('../includes/scripts.php');
+include('../includes/footer.php');
 ?>

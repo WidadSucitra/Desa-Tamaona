@@ -1,6 +1,7 @@
 <?php
-include('includes/header.php'); 
-include('includes/navbar.php'); 
+include "../config.php";
+include "../includes/header.php"; 
+include "../includes/navbar.php"; 
 ?>
 
 
@@ -108,8 +109,7 @@ include('includes/navbar.php');
 
 
 
-
-  <?php
-include('includes/scripts.php');
-include('includes/footer.php');
+<?php
+include('../includes/scripts.php');
+include('../includes/footer.php');
 ?>

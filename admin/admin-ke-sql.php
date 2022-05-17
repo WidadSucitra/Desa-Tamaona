@@ -1,7 +1,7 @@
 <?php
-include "config.php";
-include('includes/header.php'); 
-include('includes/navbar.php'); 
+include "../config.php";
+include "../includes/header.php"; 
+include "../includes/navbar.php"; 
 
 $jenis_potensi = "";
 $ket = "";
@@ -13,7 +13,7 @@ if(isset($_POST['simpan'])){
   $ket = $_POST['ket'];
 
   if($jenis_potensi&&$ket){
-    $sql1 = "INSERT into potensi_desa (jenis_potensi, ket) values ('$jenis_potensi','$ket')";
+    $sql1 = "insert into potensi_desa (jenis_potensi, ket) values ('$jenis_potensi','$ket')";
     $q1 = mysqli_query($conn,$sql1);
     if($q1){
       $sukses = "Berhasil menambahkan data baru";
@@ -52,12 +52,7 @@ if(isset($_POST['simpan'])){
       }
       
       ?>
-
-<!-- ################################################################################################################################
-                                                              FORM CREATE
-##################################################################################################################################### -->
-
-      <div class="modal fade" id="addpotensi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="addadminprofile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -67,6 +62,7 @@ if(isset($_POST['simpan'])){
               </button>
             </div>
             <form action="" method="POST">
+  
               <div class="modal-body">
                 <div class="form-group">
                     <label for="jenis_potensi" > Jenis Potensi </label>
@@ -78,7 +74,7 @@ if(isset($_POST['simpan'])){
                 </div>
                 <!-- <div class="form-group">
                     <label for="gambar" > Foto </label>
-                    <input type="gambar" name="gambar" id="gambar" class="nobg" value="">
+                    <input type="gambar" name="gambar" id="gambar" class="nobg" value="<?php echo $jenis_potensi ?>">
                 </div>              -->
               </div>
               
@@ -87,57 +83,17 @@ if(isset($_POST['simpan'])){
                   <button type="simpan" name="simpan" value= "Simpan Data" class="btn btn-primary">Save</button>
               </div>
             </form>
-
+  
           </div>
         </div>
       </div>
-
-<!-- ################################################################################################################################
-                                                              FORM EDIT
-##################################################################################################################################### -->
-  
-      <!-- <div class="modal fade" id="editpotensi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Edit Potensi</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <form action="" method="POST">
-              <div class="modal-body">
-              <input type="hidden" name="id" id="id">
-                <div class="form-group">
-                    <label for="jenis_potensi" > Jenis Potensi </label>
-                    <input type="text" name="jenis_potensi" id="jenis_potensi" class="form-control" placeholder="Tambahkan Jenis Potensi" value="<?php echo $jenis_potensi ?>">
-                </div>
-                <div class="form-group">
-                    <label for="ket" > Keterangan </label>
-                    <input type="text" name="ket" id="ket" class="form-control" placeholder="Tambahkan Jenis Potensi" value="<?php echo $ket ?>">
-                </div>
-                <!-- <div class="form-group">
-                    <label for="gambar" > Foto </label>
-                    <input type="gambar" name="gambar" id="gambar" class="nobg" value="">
-                </div>              -->
-              </div>
-              
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="simpan" name="update" value= "Simpan Data" class="btn btn-primary">Update</button>
-              </div>
-            </form>
-
-          </div>
-        </div>
-      <!-- </div> --> 
   
       <div class="container-fluid">
         <div class="card shadow mb-4">
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Halaman Potensi 
             </h6>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addpotensi">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
               Add Potensi 
             </button>
           </div>
@@ -145,7 +101,8 @@ if(isset($_POST['simpan'])){
           <div class="card-body">
   
             <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                     <th>No. </th>
@@ -206,6 +163,6 @@ if(isset($_POST['simpan'])){
   <!-- End of Main Content -->
 
 <?php
-include('includes/scripts.php');
-include('includes/footer.php');
+include('../includes/scripts.php');
+include('../includes/footer.php');
 ?>
