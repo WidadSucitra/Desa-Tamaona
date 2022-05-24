@@ -1,7 +1,42 @@
 <?php
+ob_start(); 
 include "../config.php";
 include "../includes/header.php"; 
 include "../includes/navbar.php"; 
+
+if(isset($_POST['submit_delete'])){
+  $event_id = $_POST['submit_delete'];
+
+  $check_img_query = "SELECT * FROM daftar WHERE id=$event_id' LIMIT 1";
+  $img_res = mysqli_query($conn,$query);
+  $res_data = mysqli_fetch_array($img_res);
+
+  $Gambar = $res_data['Gambar'];
+
+  $query = "DELETE FROM daftar WHERE id='$event_id' LIMIT 1";
+  $query_run = mysqli_query($conn,$query);
+
+
+
+  if($query_run)
+    {
+      if(file_exists('../uploads/event/'.$Gambar)){
+          unlink("../uploads/event/'.$Gambar");
+      }
+      move_uploaded_file($_FILES['Gambar']['tmp_name'], '../uploads/event/'.$update_filename);
+     
+        
+      // $_SESSION['message'] = "Data berhasil ditambahkan!";
+      header('Location: index.php');
+      exit(0);
+  }
+  else
+  {
+    $_SESSION['message'] = "Something went wrong";
+    header('Location: index.php');
+      exit(0);
+    }
+}
 
 ?>
 
@@ -43,7 +78,11 @@ include "../includes/navbar.php";
                   <td><img style="width: 120px;" src="../uploads/event/<?php echo $row['Gambar']; ?>"></td>
                   <td class="btn-index">
                   <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
-                    <a href="proses_hapus.php<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')"><button class="btn btn-danger">Hapus</button></a>
+                    <!--<a href="proses_hapus.php<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')"><button class="btn btn-danger">Hapus</button></a> -->
+                    
+                    <form method="POST">
+                      <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
+                    </form>
                   </td>
                 </tr>
                 <?php
