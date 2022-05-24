@@ -22,7 +22,7 @@ if (isset($_POST['submit']) && isset($_FILES['image_url'])) {
       // Upload Image to uploads folder
       move_uploaded_file($_FILES['image_url']['tmp_name'], '../uploads/jenis_potensi/'.$filename);
       
-      $_SESSION['message'] = "Data berhasil ditambahkan!";
+      // $_SESSION['message'] = "Data berhasil ditambahkan!";
       header('Location: index.php');
       exit(0);
   }

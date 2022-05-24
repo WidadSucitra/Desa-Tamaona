@@ -1,19 +1,42 @@
 <?php
+ob_start(); 
 include "../config.php";
 include "../includes/header.php"; 
 include "../includes/navbar.php"; 
+        		
+if(isset($_POST['submit_delete'])){
+  $potensi_id = $_POST['submit_delete'];
 
-// $sql = "SELECT * FROM images ORDER BY id DESC";
-//           $res = mysqli_query($conn,  $sql);
+  $check_img_query = "SELECT * FROM potensi_desa WHERE id=$potensi_id' LIMIT 1";
+  $img_res = mysqli_query($conn,$query);
+  $res_data = mysqli_fetch_array($img_res);
 
-//           if (mysqli_num_rows($res) > 0) {
-//           	while ($images = mysqli_fetch_assoc($res)) {  ?>
-             
-             <!-- <div class="alb"> -->
-             	<!-- <img src="uploads/<?=$images['image_url']?>"> -->
-             <!-- </div> -->
-          		
-    <?php //} }
+  $image = $res_data['image_url'];
+
+  $query = "DELETE FROM potensi_desa WHERE id='$potensi_id' LIMIT 1";
+  $query_run = mysqli_query($conn,$query);
+
+
+
+  if($query_run)
+    {
+      if(file_exists('../uploads/jenis_potensi/'.$image)){
+          unlink("../uploads/jenis_potensi/'.$image");
+      }
+      move_uploaded_file($_FILES['image_url']['tmp_name'], '../uploads/jenis_potensi/'.$update_filename);
+     
+        
+      // $_SESSION['message'] = "Data berhasil ditambahkan!";
+      header('Location: index.php');
+      exit(0);
+  }
+  else
+  {
+    $_SESSION['message'] = "Something went wrong";
+    header('Location: index.php');
+      exit(0);
+    }
+}
 
 ?>
 
@@ -52,7 +75,9 @@ include "../includes/navbar.php";
                   <td><img src="../uploads/jenis_potensi/<?php echo $row['image_url']; ?>"></td>
                   <td>
                     <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
-                    <a href="hapus.php<?php echo $row ?>"><button class="btn btn-danger">Hapus</button></a>
+                    <form method="POST">
+                      <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" class="btn btn-danger">Hapus</button>
+                    </form>
                   </td>
                 </tr>
                 <?php
