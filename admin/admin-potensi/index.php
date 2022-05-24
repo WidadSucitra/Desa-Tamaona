@@ -3,6 +3,18 @@ include "../config.php";
 include "../includes/header.php"; 
 include "../includes/navbar.php"; 
 
+// $sql = "SELECT * FROM images ORDER BY id DESC";
+//           $res = mysqli_query($conn,  $sql);
+
+//           if (mysqli_num_rows($res) > 0) {
+//           	while ($images = mysqli_fetch_assoc($res)) {  ?>
+             
+             <!-- <div class="alb"> -->
+             	<!-- <img src="uploads/<?=$images['image_url']?>"> -->
+             <!-- </div> -->
+          		
+    <?php //} }
+
 ?>
 
         <!-- Begin Page Content -->
