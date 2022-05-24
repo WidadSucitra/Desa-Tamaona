@@ -4595,9 +4595,90 @@ CREATE-ADMIN-POTENSI
 
 
 
+/*--------------------------------------------------------------------------------------------------------------
+CREATE-ADMIN-EVENT INDEX.PHP
+--------------------------------------------------------------------------------------------------------------*/
+.container-fluid .index-event{
+  margin: 20px 30px;
+}
+
+.container-fluid .index-event .btn-index-event{
+  background-color: #6d9773;
+  border-radius: 20px;
+  border: 1px solid #6d9773;
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.container-fluid .index-event .btn-index-event a{
+  color: #fff;
+}
+
+.container-fluid .index-event .btn-index-event:hover{
+  background-color: #ffba00;
+}
+
+.container-fluid .index-event .btn-index-event a:hover{
+  color: #0C3B2E;
+}
+
+.index-event .table{
+  margin-top: 50px;
+}
+
+.index-event .table thead th {
+  background-color: #0c3b2e;
+  color: white;
+  border: none;
+}
+
+.index-event .table td, .index-event .table tr th{
+  border-bottom: 1px solid #0c3b2e;
+}
+
+.index-event .table .btn-index a{
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+CREATE-ADMIN-EVENT CREATE.PHP
+--------------------------------------------------------------------------------------------------------------*/
+.create-admin-event{
+  margin: 20px 30px;
+}
+.create-admin-event label{
+  margin-top: 10px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  color: #0C3B2E;
+}
+
+.create-admin-event input{
+  padding: 6px;
+  width: 80%;
+  box-sizing: border-box;
+  background-color: #ffff;
+  border: 2px solid #ccc;
+  outline-color: #ffba00;
+}
+
+.create-admin-event button{
+  background-color: #6d9773;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border: 0;
+  margin-top: 20px;
+}
+
+.create-admin-event button:hover{
+  background-color: #ffba00;
+}
 
 
-
+/*=============================================================================================================================*/
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
