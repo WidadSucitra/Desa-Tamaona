@@ -22,6 +22,7 @@ if (isset($_POST['submit']) && isset($_FILES['gambar'])) {
   {
       // Upload Image to uploads folder
       move_uploaded_file($_FILES['gambar']['tmp_name'], '../uploads/event/'.$filename);
+      $_SESSION['message'] = "Data berhasil ditambahkan!";
       header('Location: index.php');
       exit(0);
   }

@@ -42,11 +42,9 @@ include "../includes/navbar.php";
                   <td width=50%><?php echo substr($row['Deskripsi'], 0, 1000); ?>...</td>
                   <td><img style="width: 120px;" src="../uploads/event/<?php echo $row['Gambar']; ?>"></td>
                   <td class="btn-index">
-                    <a href="edit.php"<?php echo $row['id']; ?>><button class="btn btn-warning">Edit</button></a>
+                  <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
                     <a href="proses_hapus.php<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')"><button class="btn btn-danger">Hapus</button></a>
                   </td>
-
-
                 </tr>
                 <?php
                   $no++;
