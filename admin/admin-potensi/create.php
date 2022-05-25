@@ -1,54 +1,38 @@
 <?php
-
+ob_start(); 
 include "../includes/header.php"; 
 include "../includes/navbar.php"; 
+include "../config.php";
 
 
-// if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
-// 	include "../config.php";
+if (isset($_POST['submit']) && isset($_FILES['image_url'])) {
+  $jenis_potensi = $_POST['jenis_potensi'];
+  $ket = $_POST['ket'];
+  $image_url = $_FILES['image_url']['name'];
+  $image_extension = pathinfo($image_url, PATHINFO_EXTENSION);
+  $filename =time().'.'.$image_extension;
 
-// 	echo "<pre>";
-// 	print_r($_FILES['my_image']);
-// 	echo "</pre>";
+  $query = "INSERT INTO potensi_desa (jenis_potensi,ket,image_url) 
+				        VALUES('$jenis_potensi','$ket','$filename')";
 
-// 	$img_name = $_FILES['my_image']['name'];
-// 	$img_size = $_FILES['my_image']['size'];
-// 	$tmp_name = $_FILES['my_image']['tmp_name'];
-// 	$error = $_FILES['my_image']['error'];
+	$query_run=mysqli_query($conn, $query);
 
-// 	if ($error === 0) {
-// 		if ($img_size > 125000) {
-// 			$em = "Sorry, your file is too large.";
-// 		    header("Location: create.php?error=$em");
-// 		}else {
-// 			$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-// 			$img_ex_lc = strtolower($img_ex);
-
-// 			$allowed_exs = array("jpg", "jpeg", "png"); 
-
-// 			if (in_array($img_ex_lc, $allowed_exs)) {
-// 				$new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
-// 				$img_upload_path = 'uploads/'.$new_img_name;
-// 				move_uploaded_file($tmp_name, $img_upload_path);
-
-// 				// Insert into Database
-// 				$sql = "INSERT INTO potensi_desa (image_url) 
-// 				        VALUES('$new_img_name')";
-// 				mysqli_query($conn, $sql);
-// 				header("Location: view.php");
-// 			}else {
-// 				$em = "You can't upload files of this type";
-// 		        header("Location: create.php?error=$em");
-// 			}
-// 		}
-// 	}else {
-// 		$em = "unknown error occurred!";
-// 		header("Location: create.php?error=$em");
-// 	}
-
-// }else {
-// 	header("Location: create.php");
-// }
+  if($query_run)
+  {
+      // Upload Image to uploads folder
+      move_uploaded_file($_FILES['image_url']['tmp_name'], '../uploads/jenis_potensi/'.$filename);
+      
+      // $_SESSION['message'] = "Data berhasil ditambahkan!";
+      header('Location: index.php');
+      exit(0);
+  }
+  else
+  {
+    $_SESSION['message'] = "Something went wrong";
+    header('Location: index.php');
+      exit(0);
+  }
+}
 
 ?>
 
@@ -57,20 +41,20 @@ include "../includes/navbar.php";
     <section class="create-admin-potensi">
         <!-- Page Heading -->
         <h1 class="h3 mb-4 text-gray-800">Tambahkan Potensi</h1>
-        
+        <?php include "message.php";?>
         <!-- FORM -->
-        <form method="post" enctype="multipart/fotm-data">
+        <form method="post" enctype="multipart/form-data">
           <div class="mb-3">
             <label for="jenis_potensi" class="form-label">Jenis Potensi</label>
-            <input type="text" class="form-control" id="jenis_potensi" name="jenis_potensi" autocomplete="off" placeholder="Masukkan jenis potensi.">
+            <input type="text" class="form-control" id="jenis_potensi" name="jenis_potensi" autocomplete="off" required placeholder="Masukkan jenis potensi.">
           </div>
           <div class="mb-3">
             <label for="ket" class="form-label">Keterangan</label>
-            <input type="text" class="form-control" id="ket" name="ket" rows="5" autocomplete="off" placeholder="Masukkan keterangan jenis potensi.">
+            <input type="text" class="form-control" id="ket" name="ket" rows="5" autocomplete="off" required placeholder="Masukkan keterangan jenis potensi.">
           </div>
           <div class="mb-3">
-            <label for="my_image" class="label-foto">Foto</label>
-            <input type="file" name="my_image" id="image">
+            <label for="image_url" class="label-foto">Foto</label>
+            <input type="file" name="image_url" id="image" required> 
           </div>
           <button type="submit" class="btn btn-primary" name="submit" value="Upload">Submit</button>
         </form>
