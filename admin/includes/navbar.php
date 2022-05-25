@@ -78,6 +78,14 @@
     <span>Pengaduan</span></a>
 </li>
 
+<!------------------------------------------------- HALAMAN LOGOUT ------------------------------------------------>
+<li class="nav-item">
+  <a class="nav-link" href="../logout.php">
+    <i class="fas fa-fw fa-chart-area"></i>
+    <span>Logout</span></a>
+</li>
+
+
 <!-- Divider -->
 <!-- <hr class="sidebar-divider"> -->
 
