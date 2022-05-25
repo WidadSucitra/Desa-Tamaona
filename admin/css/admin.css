@@ -4532,7 +4532,8 @@ div.container-fluid{
 }
 
 .index-potensi .table, 
-.index-event .table{
+.index-event .table, 
+.index-komoditi .table{
   background-color: white;
   width: 100%;
   margin-bottom: 1rem;
@@ -4540,23 +4541,27 @@ div.container-fluid{
   text-align: center;
 }
 .index-potensi .table thead th, 
-.index-event .table thead th {
+.index-event .table thead th,
+.index-komoditi .table thead th {
   background-color: white;
   color: rgb(33, 33, 33);
 }
 
 .index-potensi .table td, .index-potensi .table thead th, 
-.index-event .table td, .index-event .table thead th{
+.index-event .table td, .index-event .table thead th, 
+.index-komoditi .table td, .index-komoditi .table thead th{
   border: 1px solid rgb(133 135 150);
 }
 
 .index-potensi .table tr:nth-child(even), 
-.index-event .table tr:nth-child(even){
+.index-event .table tr:nth-child(even),
+.index-komoditi .table tr:nth-child(even){
   background-color: #e4e4e4;
 }
 
 .index-potensi .table img, 
-.index-event .table img{
+.index-event .table img,
+.index-komoditi .table img{
   width: 100px;
 }
 
@@ -4594,10 +4599,81 @@ CREATE-ADMIN-POTENSI
   margin: 20px 30px;
 }
 
+/*--------------------------------------------------------------------------------------------------------------
+INDEX-ADMIN-POTENSI-KOMODITI 
+--------------------------------------------------------------------------------------------------------------*/
+.container-fluid .index-komoditi{
+  margin: 20px 30px;
+}
+
+.container-fluid .index-komoditi .btn-index-komoditi{
+  background-color: #6d9773;
+  border-radius: 20px;
+  border: 1px solid #6d9773;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.container-fluid .index-komoditi .btn-index-komoditi a{
+  color: #fff;
+}
+
+.container-fluid .index-komoditi .btn-index-komoditi:hover{
+  background-color: #ffba00;
+}
+
+.container-fluid .index-komoditi .btn-index-komoditi a:hover{
+  color: #0C3B2E;
+}
+
+.index-komoditi .table{
+  margin-top: 50px;
+}
+
+.index-komoditi .table .btn-index a{
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+CREATE-ADMIN-POTENSI-KOMODITI 
+--------------------------------------------------------------------------------------------------------------*/
+.create-admin-komoditi{
+  margin: 20px 30px;
+}
+.create-admin-komoditi label{
+  margin-top: 10px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  color: #0C3B2E;
+}
+
+.create-admin-komoditi input{
+  padding: 6px;
+  width: 80%;
+  box-sizing: border-box;
+  background-color: #ffff;
+  border: 2px solid #ccc;
+  outline-color: #ffba00;
+}
+
+.create-admin-komoditi button{
+  background-color: #6d9773;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border: 0;
+  margin-top: 20px;
+}
+
+.create-admin-komoditi button:hover{
+  background-color: #ffba00;
+}
 
 
 /*--------------------------------------------------------------------------------------------------------------
-CREATE-ADMIN-EVENT INDEX.PHP
+INDEX-ADMIN-EVENT INDEX.PHP
 --------------------------------------------------------------------------------------------------------------*/
 .container-fluid .index-event{
   margin: 20px 30px;
