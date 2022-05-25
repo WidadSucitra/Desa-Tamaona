@@ -40,12 +40,12 @@ if (isset($_POST['submit']) && isset($_FILES['image_url'])) {
 <div class="container-fluid">
     <section class="create-admin-potensi">
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">Tambahkan Potensi</h1>
+        <h1 class="h3 mb-4 text-gray-800">Tambahkan Data</h1>
         <?php include "message.php";?>
         <!-- FORM -->
         <form method="post" enctype="multipart/form-data">
           <div class="mb-3">
-            <label for="batas" class="form-label">Jenis Potensi</label>
+            <label for="batas" class="form-label">Batas</label>
             <input type="text" class="form-control" id="batas" name="batas" autocomplete="off" required placeholder="Masukkan jenis potensi.">
           </div>
           <div class="mb-3">

@@ -22,7 +22,7 @@ if (isset($_POST['submit']) && isset($_FILES['gambar'])) {
   {
       // Upload Image to uploads folder
       move_uploaded_file($_FILES['gambar']['tmp_name'], '../uploads/potensi_komoditi/'.$filename);
-      $_SESSION['message'] = "Data berhasil ditambahkan!";
+      // $_SESSION['message'] = "Data berhasil ditambahkan!";
       header('Location: index.php');
       exit(0);
   }

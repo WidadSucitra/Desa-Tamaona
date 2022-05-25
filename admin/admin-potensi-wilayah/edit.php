@@ -69,7 +69,7 @@ if (isset($_POST['submit'])){
                    <form method="post" enctype="multipart/form-data">
                        <input type="hidden" name="batas_id" value="<?= $potensi_row['id']?>">
                     <div class="mb-3">
-                        <label for="batas" class="form-label">Jenis Potensi</label>
+                        <label for="batas" class="form-label">Batas</label>
                         <input type="text" class="form-control" id="batas" name="batas" autocomplete="off" required placeholder="Masukkan jenis potensi." value="<?= $potensi_row['batas']?>">
                     </div>
                     <div class="mb-3">
