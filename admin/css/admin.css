@@ -4519,6 +4519,85 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 
+/* --------------------------------------------------------------
+INDEX-ADMIN-HOME
+--------------------------------------------------------------*/
+.container-fluid .index-home{
+  margin: 20px 30px;
+}
+
+.container-fluid .index-home .btn-index-home, .create-admin-home button{
+  background-color: #6d9773;
+  border-radius: 20px;
+  border: 1px solid #6d9773;
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.container-fluid .index-home .btn-index-home a, .create-admin-home button{
+  color: #fff;
+}
+
+.container-fluid .index-home .btn-index-home:hover, .create-admin-home button:hover{
+  background-color: #ffba00;
+}
+
+.container-fluid .index-home .btn-index-home a:hover{
+  color: #0C3B2E;
+}
+
+.index-home .table{
+  margin-top: 50px;
+}
+
+.index-home .table thead th {
+  background-color: #0c3b2e;
+  color: white;
+  border: none;
+}
+
+.index-home .table td, .index-home .table tr th{
+  border-bottom: 1px solid #0c3b2e;
+}
+
+.index-home .table .btn-index a{
+  text-decoration: none;
+}
+
+.index-home .table img{
+  width: 100px;
+}
+
+/* --------------------------------------------------------------
+CREATE-ADMIN-HOME
+--------------------------------------------------------------*/
+.create-admin-home {
+  margin: 20px 30px;
+}
+.create-admin-home input{
+  padding: 6px;
+  width: 80%;
+  box-sizing: border-box;
+  background-color: #ffff;
+  border: 2px solid #ccc;
+  outline-color: #ffba00;
+}
+
+.create-admin-home button{
+  background-color: #6d9773;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border: 0;
+  margin-top: 20px;
+}
+
+.create-admin-home button:hover{
+  background-color: #ffba00;
+}
+
+
 
 
 
