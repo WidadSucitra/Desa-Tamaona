@@ -4551,23 +4551,11 @@ INDEX-ADMIN-HOME
   margin-top: 50px;
 }
 
-.index-home .table thead th {
-  background-color: #0c3b2e;
-  color: white;
-  border: none;
-}
-
-.index-home .table td, .index-home .table tr th{
-  border-bottom: 1px solid #0c3b2e;
-}
-
 .index-home .table .btn-index a{
   text-decoration: none;
 }
 
-.index-home .table img{
-  width: 100px;
-}
+
 
 /* --------------------------------------------------------------
 CREATE-ADMIN-HOME
@@ -4575,29 +4563,6 @@ CREATE-ADMIN-HOME
 .create-admin-home {
   margin: 20px 30px;
 }
-.create-admin-home input{
-  padding: 6px;
-  width: 80%;
-  box-sizing: border-box;
-  background-color: #ffff;
-  border: 2px solid #ccc;
-  outline-color: #ffba00;
-}
-
-.create-admin-home button{
-  background-color: #6d9773;
-  color: #fff;
-  padding: 10px;
-  font-size: 14px;
-  border: 0;
-  margin-top: 20px;
-}
-
-.create-admin-home button:hover{
-  background-color: #ffba00;
-}
-
-
 
 
 /*--------------------------------------------------------------------------------------------------------------
@@ -4611,7 +4576,9 @@ div.container-fluid{
 }
 
 .index-potensi .table, 
-.index-event .table{
+.index-event .table,
+.index-home .table,
+.index-galeri .table{
   background-color: white;
   width: 100%;
   margin-bottom: 1rem;
@@ -4619,23 +4586,31 @@ div.container-fluid{
   text-align: center;
 }
 .index-potensi .table thead th, 
-.index-event .table thead th {
+.index-event .table thead th 
+.index-home .table thead th,
+.index-galeri .table thead th { 
   background-color: white;
   color: rgb(33, 33, 33);
 }
 
 .index-potensi .table td, .index-potensi .table thead th, 
-.index-event .table td, .index-event .table thead th{
+.index-event .table td, .index-event .table thead th,
+.index-home .table td, .index-home .table thead th,
+.index-galeri .table td, .index-galeri .table thead th {
   border: 1px solid rgb(133 135 150);
 }
 
 .index-potensi .table tr:nth-child(even), 
-.index-event .table tr:nth-child(even){
+.index-event .table tr:nth-child(even),
+.index-home .table tr:nth-child(even),
+.index-galeri .table tr:nth-child(even){
   background-color: #e4e4e4;
 }
 
 .index-potensi .table img, 
-.index-event .table img{
+.index-event .table img,
+.index-home .table img,
+.index-galeri .table img{
   width: 100px;
 }
 
@@ -4745,6 +4720,50 @@ CREATE-ADMIN-EVENT CREATE.PHP
 
 .create-admin-event button:hover{
   background-color: #ffba00;
+}
+
+/* --------------------------------------------------------------
+INDEX-ADMIN-GALERI
+--------------------------------------------------------------*/
+.container-fluid .index-galeri{
+  margin: 20px 30px;
+}
+
+.container-fluid .index-galeri .btn-index-galeri, .create-admin-galeri button{
+  background-color: #6d9773;
+  border-radius: 20px;
+  border: 1px solid #6d9773;
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.container-fluid .index-galeri .btn-index-galeri a, .create-admin-galeri button{
+  color: #fff;
+}
+
+.container-fluid .index-galeri .btn-index-galeri:hover, .create-admin-galeri button:hover{
+  background-color: #ffba00;
+}
+
+.container-fluid .index-galeri .btn-index-galeri a:hover{
+  color: #0C3B2E;
+}
+
+.index-galeri .table{
+  margin-top: 50px;
+}
+
+.index-galeri .table .btn-index a{
+  text-decoration: none;
+}
+
+
+/* --------------------------------------------------------------
+CREATE-ADMIN-GALERI
+--------------------------------------------------------------*/
+.create-index-galeri {
+  margin: 20px 30px;
 }
 
 
