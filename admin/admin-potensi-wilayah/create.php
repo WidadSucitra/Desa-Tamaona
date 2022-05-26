@@ -46,11 +46,11 @@ if (isset($_POST['submit']) && isset($_FILES['image_url'])) {
         <form method="post" enctype="multipart/form-data">
           <div class="mb-3">
             <label for="batas" class="form-label">Batas</label>
-            <input type="text" class="form-control" id="batas" name="batas" autocomplete="off" required placeholder="Masukkan jenis potensi.">
+            <input type="text" class="form-control" id="batas" name="batas" autocomplete="off" required placeholder="Masukkan batas wilayah.">
           </div>
           <div class="mb-3">
             <label for="ket" class="form-label">Keterangan</label>
-            <input type="text" class="form-control" id="ket" name="ket" rows="5" autocomplete="off" required placeholder="Masukkan keterangan jenis potensi.">
+            <input type="text" class="form-control" id="ket" name="ket" rows="5" autocomplete="off" required placeholder="Masukkan keterangan batas wilayah.">
           </div>
           <div class="mb-3">
             <label for="image_url" class="label-foto">Foto</label>

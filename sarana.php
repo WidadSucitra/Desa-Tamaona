@@ -25,9 +25,6 @@ include "admin/config.php";
                   <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="btn">
-                      <a href="">Tunjukkan Jalan</a>
-                    </button>
                   </div>
                 </div>        
                 <div class="swiper-slide card card-content potensi-wilayah-batas" >
@@ -35,9 +32,6 @@ include "admin/config.php";
                   <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="btn">
-                      <a href="">Tunjukkan Jalan</a>
-                    </button>
                   </div>
                 </div>
 
@@ -46,9 +40,6 @@ include "admin/config.php";
                   <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="btn">
-                      <a href="">Tunjukkan Jalan</a>
-                    </button>
                   </div>
                 </div>
 
@@ -57,9 +48,51 @@ include "admin/config.php";
                   <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="btn">
-                      <a href="">Tunjukkan Jalan</a>
-                    </button>
+                  </div>
+                </div>  
+              </div>
+              
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="masjid">
+          <div class="container">
+            <div class="row text-center mb-3">
+              <h2>Layanan Masyarakat</h2>
+            </div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card card-content potensi potensi-wilayah-batas" >
+                  <h5> Masjid Al Markaz</h5>
+                  <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>        
+                <div class="swiper-slide card card-content potensi potensi-wilayah-batas" >
+                  <h5> Masjid Al Markaz</h5>
+                  <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide card card-content potensi potensi-wilayah-batas" >
+                  <h5> Masjid Al Markaz</h5>
+                  <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide card card-content potensi potensi-wilayah-batas" >
+                  <h5> Masjid Al Markaz</h5>
+                  <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
                 </div>  
               </div>
@@ -119,10 +152,10 @@ include "admin/config.php";
           </div>
         </div> -->
 
-        <div id="masjid">
+        <!-- <div id="masjid">
           <div class="container">
             <div class="row text-center mb-3">
-              <h2>Masjid di Desa Tamaona</h2>
+              <h2>Layanan Masyarakat</h2>
             </div>
             <div class="row potensi-wilayah-batas justify-content-center">
               <div class="card potensi-wilayah-batas" >
@@ -191,7 +224,7 @@ include "admin/config.php";
             </div>
           </div>
   
-        </div>
+        </div> -->
 
       </div>
     </section>

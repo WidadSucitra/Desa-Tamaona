@@ -1,7 +1,6 @@
-<?php 
-include "navbar.php"; 
+<?php include "navbar.php"; 
 include "admin/config.php";
-?>
+?> 
 
   <!-- jumbotron -->
   <section class="d-flex align-items-center">
@@ -59,9 +58,6 @@ include "admin/config.php";
 
   </section>
 
-
-
-
-  <?php 
+<?php 
 include "footer.php"; 
-?>
+?> 

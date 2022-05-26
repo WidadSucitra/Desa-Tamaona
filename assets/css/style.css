@@ -1001,6 +1001,10 @@ SARANA.HTML
   .sarana .btn:hover{
     background-color: #609773;
   }
+
+  div#masjid{
+    padding-top: 80px;
+  }
   
   #sekolah,#masjid, .status-perkawinan, .daftar-dusun{
     margin: 100px 0;
@@ -1707,7 +1711,7 @@ FORM-PENGADUAN.HTML
 
 .laporan .tbl-laporan td input, .laporan .tbl-laporan td textarea{
   background-color: rgb(230, 230, 230);
-  color: #FFBA00;
+  color: #000000;
   border: none;
   padding: 6px 4px;
   margin: 8px 0;

@@ -13,24 +13,6 @@ include "admin/config.php";
   <main>
     <section>
       <div class="container potensi">
-          
-        <div class="row potensi-wilayah-batas">
-            <div class="col">
-                <h1>Luas Wilayah</h1>
-            </div> 
-        </div>
-
-        <div class="row potensi-wilayah-batas justify-content-md-center">
-            <div class="col-md-7 ">
-                <img src="assets/img/potensi/batas/bata2.jpg" alt="">
-            </div> 
-        </div>
-
-        <div class="row potensi-wilayah-batas justify-content-md-center">
-            <div class="col-md-7 text-center mt-2 ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut dolore dignissimos explicabo sit sequi beatae, necessitatibus atque accusamus illo eos delectus placeat iste eius et odio quo doloremque quae.</p>
-            </div> 
-        </div>
 
         <div class="row potensi-wilayah-batas">
             <div class="col mt-5">
