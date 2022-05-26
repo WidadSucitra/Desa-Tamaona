@@ -34,7 +34,7 @@ include "admin/config.php";
               </div>
               <div class="col-md-8">
                   <h2>Jembatan Putus</h2>
-                  <p class="waktu">28/02/2021</p>
+                  <!-- <p class="waktu">28/02/2021</p> -->
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
               </div>
           </div>
@@ -45,7 +45,7 @@ include "admin/config.php";
             </div>
             <div class="col-md-8">
                 <h2>Pengaduan 2</h2>
-                <p class="waktu">28/02/2021</p>
+                <!-- <p class="waktu">28/02/2021</p> -->
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
             </div>
         </div>
@@ -56,7 +56,7 @@ include "admin/config.php";
             </div>
             <div class="col-md-8">
                 <h2>Pengaduan 3</h2>
-                <p class="waktu">28/02/2021</p>
+                <!-- <p class="waktu">28/02/2021</p> -->
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
             </div>
         </div>
@@ -67,7 +67,7 @@ include "admin/config.php";
             </div>
             <div class="col-md-8">
                 <h2>Pengaduan 4</h2>
-                <p class="waktu">28/02/2021</p>
+                <!-- <p class="waktu">28/02/2021</p> -->
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
             </div>
         </div>
