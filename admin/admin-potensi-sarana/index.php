@@ -78,13 +78,13 @@ if(isset($_POST['submit_delete'])){
         <div class="container-fluid">
           <section class="index-potensi">
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">Potensi Desa Tamaona</h1>
-            <a href="create.php"><button class="btn-index-potensi">Tambah Potensi</button></a>
+            <h1 class="h3 mb-4 text-gray-800">Fasilitas Desa Tamaona</h1>
+            <a href="create.php"><button class="btn-index-potensi">Tambah Fasilitas</button></a>
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Jenis Potensi</th>
+                  <th scope="col">Fasilitas</th>
                   <th scope="col">Keterangan</th>
                   <th scope="col">Gambar</th>
                   <th scope="col"></th>
@@ -129,13 +129,13 @@ if(isset($_POST['submit_delete'])){
         <div class="container-fluid">
           <section class="index-potensi">
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">Potensi Desa Tamaona</h1>
-            <a href="create_layanan.php"><button class="btn-index-potensi">Tambah Potensi</button></a>
+            <h1 class="h3 mb-4 text-gray-800">Pelayanan di Desa Tamaona</h1>
+            <a href="create_layanan.php"><button class="btn-index-potensi">Tambah Layanan</button></a>
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Jenis Potensi</th>
+                  <th scope="col">Layanan</th>
                   <th scope="col">Keterangan</th>
                   <th scope="col">Gambar</th>
                   <th scope="col"></th>

@@ -60,25 +60,25 @@ if (isset($_POST['submit'])){
         <?php
             if(isset($_GET['id'])){
                 $fasilitas_id = $_GET['id'];
-                $potensi_query = "SELECT * FROM fasilitas_desa WHERE id='$fasilitas_id' LIMIT 1";
-                $potensi_query_res = mysqli_query($conn, $potensi_query);
+                $fasilitas_query = "SELECT * FROM fasilitas_desa WHERE id='$fasilitas_id' LIMIT 1";
+                $fasilitas_query_res = mysqli_query($conn, $fasilitas_query);
 
-                if(mysqli_num_rows($potensi_query_res)>0){
-                   $potensi_row = mysqli_fetch_array($potensi_query_res) ;
+                if(mysqli_num_rows($fasilitas_query_res)>0){
+                   $fasilitas_row = mysqli_fetch_array($fasilitas_query_res) ;
                    ?>
                    <form method="post" enctype="multipart/form-data">
-                       <input type="hidden" name="fasilitas_id" value="<?= $potensi_row['id']?>">
+                       <input type="hidden" name="fasilitas_id" value="<?= $fasilitas_row['id']?>">
                     <div class="mb-3">
                         <label for="fasilitas" class="form-label">Fasilitas</label>
-                        <input type="text" class="form-control" id="fasilitas" name="fasilitas" autocomplete="off" required placeholder="Masukkan jenis potensi." value="<?= $potensi_row['fasilitas']?>">
+                        <input type="text" class="form-control" id="fasilitas" name="fasilitas" autocomplete="off" required placeholder="Masukkan jenis potensi." value="<?= $fasilitas_row['fasilitas']?>">
                     </div>
                     <div class="mb-3">
                         <label for="ket" class="form-label">Keterangan</label>
-                        <input type="text" class="form-control" id="ket" name="ket" rows="5" autocomplete="off" required placeholder="Masukkan keterangan jenis potensi." value="<?= $potensi_row['ket']?>">
+                        <input type="text" class="form-control" id="ket" name="ket" rows="5" autocomplete="off" required placeholder="Masukkan keterangan jenis potensi." value="<?= $fasilitas_row['ket']?>">
                     </div>
                     <div class="mb-3">
                         <label for="image_url" class="label-foto">Foto</label>
-                        <input type="hidden" name="old_image" value="<?= $potensi_row['image_url']?>"/> 
+                        <input type="hidden" name="old_image" value="<?= $fasilitas_row['image_url']?>"/> 
                         <input type="file" name="image_url" id="image">
                     </div>
                     <button type="submit" class="btn btn-primary" name="submit" value="Upload">Update</button>
