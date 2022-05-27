@@ -6,7 +6,7 @@ include "../config.php";
 
 if (isset($_POST['submit'])){
     $wisata_id = $_POST['wisata_id'];
-    $nama_wisata = $_POST['nama_wisata$nama_wisata'];
+    $nama_wisata = $_POST['nama_wisata'];
     $deskripsi = $_POST['deskripsi'];
 
     $old_filename = $_POST['old_image'];
