@@ -6,11 +6,44 @@ include "admin/config.php";
 <!-- ======= Jumbotron ======= -->
 <section class="d-flex align-items-center">
     <div class="jumbotron-potensi jumbotron">
-      <h1 class="container">POTENSI WISATA</h1>
+      <h1 class="container">Potensi Wisata</h1>
     </div>
-  </section><!-- End HJumbotron -->
+</section><!-- End HJumbotron -->
 
 <main>
+<!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery">
+        <div class="row potensi-wilayah-batas justify-content-center">
+          <div class="card potensi-wilayah-batas">
+              <h5>Wisata 1</h5>
+              <img class="card-img-top" src="assets/img/gallery/gallery-1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+          </div>
+          <div class="card potensi-wilayah-batas">
+              <h5>Wisata 2</h5>
+              <img class="card-img-top" src="assets/img/gallery/gallery-2.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+          </div>
+          <div class="card potensi-wilayah-batas">
+            <h5>Wisata 3</h5>
+            <img class="card-img-top" src="assets/img/gallery/gallery-3.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Gallery Section -->
+</main> 
+
+<!-- <main>
   <section id="potensiwisata" class="potensiwisata">
 
     <div class="container">
@@ -45,7 +78,7 @@ include "admin/config.php";
   
   </section>
 
-</main>
+</main> -->
 
 <?php 
 include "footer.php"; 
