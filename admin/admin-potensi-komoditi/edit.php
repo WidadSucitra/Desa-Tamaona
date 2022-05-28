@@ -38,7 +38,7 @@ if (isset($_POST['submit'])){
       
         
         $_SESSION['message'] = "Update berhasil!";
-        header('Location: edit.php?id='.$komoditi_id);
+        header('Location: index.php?id='.$komoditi_id);
         exit(0);
     }
     else
