@@ -12,11 +12,10 @@ if(isset($_POST['submit_delete'])){
   $res_data = mysqli_fetch_array($img_res);
 
   $dokumentasi = $res_data['dokumentasi'];
+  
 
   $query = "DELETE FROM pengaduan WHERE id='$pengaduan_id' LIMIT 1";
   $query_run = mysqli_query($conn,$query);
-
-
 
   if($query_run)
     {
@@ -47,15 +46,14 @@ if(isset($_POST['submit_delete'])){
             <!-- Page Heading -->
             <h1 class="h3 mb-4 text-gray-800">Daftar Pengaduan</h1>
 
-            <!-- <button class="btn-index-event"><a href="create.php">Tambah Event</a></button> -->
-
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">No.</th>
                   <th scope="col">Judul Pengaduan</th>
                   <th scope="col">Isi Pengaduan</th>
-                  <th scope="col">dokumentasi</th>
+                  <th scope="col">Dokumentasi</th>
+                  
                   <th scope="col"></th>
                 </tr>
               </thead>
@@ -76,10 +74,11 @@ if(isset($_POST['submit_delete'])){
                   <td><?php echo $row['judul_pengaduan']; ?></td>
                   <td width=50%><?php echo substr($row['isi_pengaduan'], 0, 1000); ?>...</td>
                   <td><img style="width: 120px;" src="../uploads/pengaduan/<?php echo $row['dokumentasi']; ?>"></td>
+                  
+                  
                   <td class="btn-index">
-                  <!-- <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
-                    <a href="proses_hapus.php<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')"><button class="btn btn-danger">Hapus</button></a> -->
-                     
+                  <!-- <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a> -->
+                
                     <form method="POST">
                       <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
                     </form>

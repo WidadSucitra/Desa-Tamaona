@@ -16,20 +16,6 @@ include "admin/config.php";
           <h1 class="pembuka">Event di Desa Tamaona</h1>
       </div>
 
-      <!-- fitur search -->
-      <div class="search_wrap search_wrap_4">
-            <div class="search_box">
-                <div class="btn btn_common">
-                    <i class="fas fa-search"></i>
-                </div>
-                <input type="text" class="input" placeholder="Search..">
-            </div>
-      </div>
-
-      <!-- fitur filter -->
-      <div class="filter">
-      </div>
-
       <!-- isi website -->
       <?php
           $query = "SELECT * FROM daftar ORDER BY id ASC";
