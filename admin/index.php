@@ -40,7 +40,7 @@ if(isset($_POST['submit'])) {
         <form action="" method="POST" class="login-email">
         <ul>
             <li style="font-size:1,8rem; font-weight:850;" class="tamaona-text">Desa Tamaona</li>
-            <li style="font-size:1,8rem; font-weight:850;" class="home"><a href="welcome.php">Home</a></li>
+            <li style="font-size:1,8rem; font-weight:850;" class="home"><a href="index.php">Home</a></li>
             
         </ul>
 
@@ -52,7 +52,7 @@ if(isset($_POST['submit'])) {
             
             <div class="input-group"><button name="submit" class="btn">Login</button></div>
 
-            <p class="login-register-text">Already have an account ? <a href="register.php">Register</a></p>
+            
         </form>
     </div>
 </body>
