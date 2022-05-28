@@ -17,7 +17,7 @@ include "admin/config.php";
     <section>
       <div class="container komoditi">
 
-        <div class="row potensi-komoditi">
+        <!-- <div class="row potensi-komoditi">
           <div class="col-md-6">
             <h2>Komoditi Pertanian</h2>
             <p>Komoditi unggulan utama sektor pertanian Desa Tamaona adalah pada tanaman pangan dan hortikultura, antara lain: talas bogor, nanas gati, pisang rajabulu dan manggis raya. Keempat komoditi tersebut adalah unggulan khas Desa Tamaona.</p>
@@ -25,19 +25,34 @@ include "admin/config.php";
           <div class="col-md-6">
             <img src="assets/img/potensi/komoditi/pertanian.jpg" alt="">
           </div>   
-        </div>
+        </div> -->
+        
+        <?php
+          $query = "SELECT * FROM potensi_komoditi ORDER BY id ASC";
+          $result = mysqli_query($conn, $query);
 
+          if(!$result) {
+            die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+          }
+          $no = 1;
+
+          while ($row = mysqli_fetch_assoc($result)) {
+        ?>
         <div class="row potensi-komoditi berwarna">
           <div class="col-md-6">
-            <img src="assets/img/potensi/komoditi/perkebunan.jpg" alt="">
+            <img src="admin/uploads/potensi_komoditi/<?php echo $row['gambar']; ?>">
           </div>   
           <div class="col-md-6">
-            <h2>Komoditi Perkebunan</h2>
-            <p>Komoditi unggulan utama sektor pertanian Desa Tamaona adalah pada tanaman pangan dan hortikultura, antara lain: talas bogor, nanas gati, pisang rajabulu dan manggis raya. Keempat komoditi tersebut adalah unggulan khas Desa Tamaona.</p>
+            <h2><?php echo $row['jenis_komoditi']; ?></h2>
+            <p><?php echo substr($row['deskripsi'], 0, 1000); ?></p>
           </div>  
         </div>
+        <?php
+          $no++;
+        }
+        ?>
 
-        <div class="row potensi-komoditi">
+        <!-- <div class="row potensi-komoditi">
           <div class="col-md-6">
             <a href="">
               <h2>Komoditi Perikanan</h2>
@@ -59,7 +74,7 @@ include "admin/config.php";
             </a>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
           </div>  
-        </div>
+        </div> -->
 
       </div>
     </section>
