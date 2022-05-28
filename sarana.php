@@ -20,14 +20,29 @@ include "admin/config.php";
             </div>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
+              <?php
+                  $query = "SELECT * FROM fasilitas_desa ORDER BY id ASC";
+                  $result = mysqli_query($conn, $query);
+
+                  if(!$result) {
+                    die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+                  }
+                  $no = 1;
+
+                  while ($row = mysqli_fetch_assoc($result)) {
+                ?>
                 <div class="swiper-slide card card-content potensi-wilayah-batas" >
-                  <h5> Masjid Al Markaz</h5>
-                  <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
+                  <h5><?php echo $row['fasilitas']; ?></h5>
+                  <img class="card-img-top p-3"  src="admin/uploads/fasilitas/<?php echo $row['image_url']; ?>" alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><?php echo substr($row['ket'], 0, 1000); ?></p>
                   </div>
-                </div>        
-                <div class="swiper-slide card card-content potensi-wilayah-batas" >
+                </div>  
+                <?php
+                  $no++;
+                }
+                ?>      
+                <!-- <div class="swiper-slide card card-content potensi-wilayah-batas" >
                   <h5> Masjid Al Markaz</h5>
                   <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
                   <div class="card-body">
@@ -49,7 +64,7 @@ include "admin/config.php";
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
-                </div>  
+                </div>   -->
               </div>
               
               <div class="swiper-pagination"></div>
@@ -65,14 +80,29 @@ include "admin/config.php";
             </div>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
+              <?php
+                  $query = "SELECT * FROM layanan_desa ORDER BY id ASC";
+                  $result = mysqli_query($conn, $query);
+
+                  if(!$result) {
+                    die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+                  }
+                  $no = 1;
+
+                  while ($row = mysqli_fetch_assoc($result)) {
+                ?>
                 <div class="swiper-slide card card-content potensi potensi-wilayah-batas" >
-                  <h5> Masjid Al Markaz</h5>
-                  <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
+                  <h5><?php echo $row['layanan']; ?></h5>
+                  <img class="card-img-top p-3" src="admin/uploads/layanan/<?php echo $row['image_url']; ?>" alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><?php echo substr($row['ket'], 0, 1000); ?></p>
                   </div>
-                </div>        
-                <div class="swiper-slide card card-content potensi potensi-wilayah-batas" >
+                </div> 
+                <?php
+                  $no++;
+                }
+                ?>        
+                <!-- <div class="swiper-slide card card-content potensi potensi-wilayah-batas" >
                   <h5> Masjid Al Markaz</h5>
                   <img class="card-img-top p-3" src="assets/img/potensi/sarana/masjid/masjid.jpg" alt="Card image cap">
                   <div class="card-body">
@@ -94,7 +124,7 @@ include "admin/config.php";
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
-                </div>  
+                </div>   -->
               </div>
               
               <div class="swiper-pagination"></div>
