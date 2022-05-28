@@ -14,20 +14,29 @@ include "admin/config.php";
   <main>
     <section>
       <div class="container potensi">
+        <?php
+          $query = "SELECT * FROM potensi_desa ORDER BY id ASC";
+          $result = mysqli_query($conn, $query);
+
+          if(!$result) {
+            die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+          }
+          $no = 1;
+
+          while ($row = mysqli_fetch_assoc($result)) {
+        ?>
 
         <div class="row potensi-wilayah">
           <div class="col-md-6">
-            <a href="batas-wilayah.html">
-              <h2>Potensi Wilayah dan Batas-Batas Wilayah</h2>
-            </a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
+            <h2><?php echo $row['jenis_potensi']; ?></h2>
+            <p><?php echo substr($row['ket'], 0, 1000); ?></p>
           </div>  
           <div class="col-md-6">
-            <img src="assets/img/potensi/jumbotron-potensi.jpg" alt="">
+            <img src="admin/uploads/jenis_potensi/<?php echo $row['image_url']; ?>">
           </div>   
         </div>
 
-        <div class="row potensi-wilayah berwarna">
+        <!-- <div class="row potensi-wilayah berwarna">
           <div class="col-md-6">
             <img src="assets/img/potensi/jumbotron-potensi.jpg" alt="">
           </div>   
@@ -73,8 +82,8 @@ include "admin/config.php";
           <div class="col-md-6">
             <img src="assets/img/potensi/jumbotron-potensi.jpg" alt="">
           </div>   
-        </div>
-
+        </div> -->
+        <?php } ?>
       </div>
     </section>
   </main>
