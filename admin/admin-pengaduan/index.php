@@ -100,7 +100,9 @@ if(isset($_POST['submit_delete'])){
                 
                 
                     <form method="POST">
-                      <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
+                      <button class="ikon1" type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')">
+                      <img class="ikon1"  src="../img/trash.png" alt="">
+                      </button>
                     </form>
                   </td>
                 </tr>

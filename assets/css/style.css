@@ -838,11 +838,15 @@ POTENSI.HTML section potensi
   float: left;
 }
 
-.potensi-wilayah h2, .potensi-komoditi h2{
+.potensi-wilayah h2, .pengaduan-kegiatan h2, .potensi-komoditi h2{
   font-size: 18px;
 }
 
-.potensi-wilayah p, .potensi-komoditi p{
+.pengaduan-kegiatan img{
+  width: 80%;
+}
+
+.potensi-wilayah p, .pengaduan-kegiatan p, .potensi-komoditi p{
   font-size: 12px;
 }
 
@@ -859,7 +863,7 @@ POTENSI.HTML section potensi
     margin-bottom: 200px;
   }
   
-  .potensi-wilayah, .potensi-komoditi{
+  .potensi-wilayah, .pengaduan-kegiatan, .potensi-komoditi{
     margin: 50px 0;
     padding: 30px;
   }
@@ -874,14 +878,14 @@ POTENSI.HTML section potensi
   }
   
   .potensi-wilayah h2, p, .potensi-komoditi h2{
-    color: #0C3B2E;;
+    color: #0C3B2E;
   }
 
-  .potensi-wilayah h2, .potensi-komoditi h2{
+  .potensi-wilayah h2, .pengaduan-kegiatan h2, .potensi-komoditi h2{
     font-size: 25px;
   }
 
-  .potensi-wilayah p, .potensi-komoditi p{
+  .potensi-wilayah p, .pengaduan-kegiatan p, .potensi-komoditi p{
     font-size: 15px;
   }
   
