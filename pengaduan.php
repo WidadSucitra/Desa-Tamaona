@@ -46,6 +46,8 @@ include "admin/config.php";
                   <h2><?php echo $row['judul_pengaduan']; ?></h2>
                   
                   <p><?php echo substr($row['isi_pengaduan'], 0, 1000); ?></p>
+                  
+
               </div>
           </div>
           <?php

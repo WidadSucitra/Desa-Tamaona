@@ -46,8 +46,6 @@ if(isset($_POST['submit_delete'])){
             <!-- Page Heading -->
             <h1 class="h3 mb-4 text-gray-800">Daftar Pengaduan</h1>
 
-            <!-- <button class="btn-index-event"><a href="create.php">Tambah Event</a></button> -->
-
             <table class="table">
               <thead>
                 <tr>
@@ -55,8 +53,7 @@ if(isset($_POST['submit_delete'])){
                   <th scope="col">Judul Pengaduan</th>
                   <th scope="col">Isi Pengaduan</th>
                   <th scope="col">Dokumentasi</th>
-                  <th scope="col">Status</th>
-                  <th scope="col"></th>
+                  
                   <th scope="col"></th>
                 </tr>
               </thead>
@@ -75,28 +72,12 @@ if(isset($_POST['submit_delete'])){
                 <tr>
                   <td><?php echo $no; ?></td>
                   <td><?php echo $row['judul_pengaduan']; ?></td>
-                  <td width=50%><?php echo substr($row['isi_pengaduan'], 0, 1000); ?></td>
+                  <td width=50%><?php echo substr($row['isi_pengaduan'], 0, 1000); ?>...</td>
                   <td><img style="width: 120px;" src="../uploads/pengaduan/<?php echo $row['dokumentasi']; ?>"></td>
                   
-                  <td>
-                    <?php 
-                    if($row['active']==1){
-                      echo "<p id=str".$row['id'].">Active</p>";
-                    } else{
-                      echo "<p id=str".$row['id'].">Disactive</p>";
-                    }
-                    ?>
-                  </td>
-                  
-                  <td>
-                    <select onchange="active_disactive(this.value,<?php echo $row['id'];?>)">
-                      <option value="1">Active</option>
-                      <option value="0">Disactive</option>
-                    </select>
-                  </td>
                   
                   <td class="btn-index">
-                  <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                  <!-- <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a> -->
                 
                     <form method="POST">
                       <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
