@@ -14,51 +14,27 @@ include "admin/config.php";
 <!-- ======= Gallery Section ======= -->
 <section id="gallery" class="gallery">
         <div class="row potensi-wilayah-batas justify-content-center">
-          <div class="card potensi-wilayah-batas">
-              <h5>Menanam Sawah</h5>
-              <img class="card-img-top" src="assets/img/gallery/gallery-1.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-          <div class="card potensi-wilayah-batas">
-              <h5>Menanam Pohon</h5>
-              <img class="card-img-top" src="assets/img/gallery/gallery-2.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-          <div class="card potensi-wilayah-batas">
-            <h5>Panen Sawah</h5>
-            <img class="card-img-top" src="assets/img/gallery/gallery-3.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row potensi-wilayah-batas justify-content-center">
-          <div class="card potensi-wilayah-batas">
-              <h5>Menggembala Sapi</h5>
-              <img class="card-img-top" src="assets/img/gallery/gallery-4.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-          <div class="card potensi-wilayah-batas">
-              <h5>Perlombaan Pacuan Kuda </h5>
-              <img class="card-img-top" src="assets/img/gallery/gallery-5.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-          <div class="card potensi-wilayah-batas">
-            <h5>Pengajian</h5>
-            <img class="card-img-top" src="assets/img/gallery/gallery-7.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
+            <?php
+                $query = "SELECT * FROM galeri_desa ORDER BY id ASC";
+                $result = mysqli_query($conn, $query);
+
+                if(!$result) {
+                  die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+                }
+                $no = 1;
+                
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                <div class="card potensi-wilayah-batas">
+                    <h5><?php echo $row['judul']; ?></h5>
+                    <img class="card-img-top" src="admin/uploads/galeri/<?php echo $row['gambar']; ?>" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text"><?php echo $row['deskripsi']; ?></p>
+                    </div>
+                </div>
+            <?php
+              }
+            ?>
         </div>
 
       </div>

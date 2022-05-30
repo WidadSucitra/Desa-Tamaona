@@ -51,7 +51,7 @@
               <ul>
                 <li><a href="batas-wilayah.php">Wilayah</a></li>
                 <li><a href="sarana.php">Sarana</a></li>
-                <li><a href="potensi-wisata.php">Potensi Wisata</a></li>
+                <li><a href="potensi-wisata.php">Wisata</a></li>
                 <li><a href="potensi-komoditi.php">Komoditi</a></li>
               </ul>
             </li>
