@@ -102,17 +102,17 @@ include "admin/config.php";
                     var myChart = new Chart(canvasElement,{
                         type: "bar",
                         data: {
-                            label: isi_labels,
+                            labels: isi_labels,
                             datasets:[
                                 {
                                     label: "Laki-Laki",
                                     data: isi_data1,
-                                    backgroundColor: "#609773"
+                                    backgroundColor: ["#609773"]
                                 },
                                 {
                                     label: "Perempuan",
                                     data: isi_data2,
-                                    backgroundColor: "yellow"
+                                    backgroundColor: ["yellow"]
                                 },
                             ],
                         },
