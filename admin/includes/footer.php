@@ -23,7 +23,7 @@
           url: 'toggle.php',
           data:{val:val,id:id},
           success :function(result){
-            if(result == '1'){
+            if(result == '0'){
               $('#str'+id).html('Active');
             } else{
               $('#str'+id).html('Disactive');

@@ -80,7 +80,7 @@ if(isset($_POST['submit_delete'])){
                   
                   <td>
                     <?php 
-                    if($row['active']==1){
+                    if($row['active']==0){
                       echo "<p id=str".$row['id'].">Active</p>";
                     } else{
                       echo "<p id=str".$row['id'].">Disactive</p>";
@@ -90,13 +90,13 @@ if(isset($_POST['submit_delete'])){
                   
                   <td>
                     <select onchange="active_disactive(this.value,<?php echo $row['id'];?>)">
-                      <option value="1">Active</option>
-                      <option value="0">Disactive</option>
+                      <option value="1">Disactive</option>
+                      <option value="0">Active</option>
                     </select>
                   </td>
                   
                   <td class="btn-index">
-                  <!-- <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a> -->
+                
                 
                     <form method="POST">
                       <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
