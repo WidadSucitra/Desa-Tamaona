@@ -214,55 +214,55 @@
     }
   });
 
-  // CHART STATUS PERKAWINAN
-  var canvasElement = document.getElementById("cookieChart");
+  // CHART STATUS PEKERJAAN
+  // var canvasElement = document.getElementById("cookieChart");
   
-  var config = {
-      type: "bar",
-      data:{
-          labels: ["Kawin", "Belum Kawin", "Cerai Hidup", "Cerai Mati"],
-          datasets:[ 
-              {
-                  label: "Pria",
-                  data: [50, 30, 10, 5],
-                  backgroundColor: "#609773"
-              },
-              {
-                  label: "Wanita",
-                  data: [50, 40, 9, 20],
-                  backgroundColor: "yellow"
-              },
+  // var config = {
+  //     type: "bar",
+  //     data:{
+  //         labels: [<?php while ($p = mysqli_fetch_array($pekerjaan)) { echo '"' . $p['pekerjaan'] . '",';}?>],
+  //         datasets:[ 
+  //             {
+  //                 label: "Laki-Laki",
+  //                 data: [<?php while ($p = mysqli_fetch_array($jumlah_laki2)) { echo '"' . $p['jumlah_laki2'] . '",';}?>],
+  //                 backgroundColor: "#609773"
+  //             },
+  //             {
+  //                 label: "Wanita",
+  //                 data: [<?php while ($p = mysqli_fetch_array($jumlah_perempuan)) { echo '"' . $p['jumlah_perempuan'] . '",';}?>],
+  //                 backgroundColor: "yellow"
+  //             },
   
-          ],
-      },
-  };
+  //         ],
+  //     },
+  // };
   
-  var cookieChart = new Chart(canvasElement,config);
+  // var cookieChart = new Chart(canvasElement,config);
 
   // CHART STATUS PERKAWINAN
-  var canvasElement = document.getElementById("cookieChart2");
+  // var canvasElement = document.getElementById("cookieChart2");
   
-  var config = {
-      type: "bar",
-      data:{
-          labels: ["SD", "SMP", "SMA", "D2", "D3", "S1", "S2", "Tidak sekolah", "Belum Sekolah"],
-          datasets:[ 
-              {
-                  label: "Pria",
-                  data: [20, 10, 12, 5, 2, 3, 0, 10, 5],
-                  backgroundColor: "#609773"
-              },
-              {
-                  label: "Wanita",
-                  data: [10, 12, 12, 5, 4, 3, 0, 15, 5],
-                  backgroundColor: "yellow"
-              },
+  // var config = {
+  //     type: "bar",
+  //     data:{
+  //         labels: ["SD", "SMP", "SMA", "D2", "D3", "S1", "S2", "Tidak sekolah", "Belum Sekolah"],
+  //         datasets:[ 
+  //             {
+  //                 label: "Pria",
+  //                 data: [20, 10, 12, 5, 2, 3, 0, 10, 5],
+  //                 backgroundColor: "#609773"
+  //             },
+  //             {
+  //                 label: "Wanita",
+  //                 data: [10, 12, 12, 5, 4, 3, 0, 15, 5],
+  //                 backgroundColor: "yellow"
+  //             },
   
-          ],
-      },
-  };
+  //         ],
+  //     },
+  // };
   
-  var cookieChart = new Chart(canvasElement,config);
+  // var cookieChart = new Chart(canvasElement,config);
 
 
 })()
