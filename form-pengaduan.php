@@ -20,13 +20,13 @@ if (isset($_POST['submit']) && isset($_FILES['dokumentasi'])) {
       // Upload Image to uploads folder
       move_uploaded_file($_FILES['dokumentasi']['tmp_name'], 'admin/uploads/pengaduan/'.$filename);
       // $_SESSION['message'] = "Data berhasil ditambahkan!";
-      header('Location: index.php');
+      header('Location: pengaduan.php');
       exit(0);
   }
   else
   {
       $_SESSION['message'] = "Something went wrong";
-      header('Location: index.php');
+      header('Location: pengaduan.php');
       exit(0);
   }
 }

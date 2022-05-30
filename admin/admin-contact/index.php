@@ -65,13 +65,10 @@ if(isset($_POST['submit_delete'])){
                   <td><?php echo $row['email']; ?></td>
                   <td><?php echo $row['perusahaan']; ?></td>
                   <td><?php echo $row['telepone']; ?></td>
-                  <td width=50%><?php echo substr($row['pesan'], 0, 1000); ?>...</td>
+                  <td width=50%><?php echo substr($row['pesan'], 0, 1000); ?></td>
                   
                   <td class="btn-index">
-                  <!-- <a href="edit.php?id=<?= $row['id'] ?>">
-                    <button  class="ikon2">
-                      <img class="ikon2" src="../img/edit.png" alt="">
-                    </button></a>
+                  <!-- <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
                     <a href="proses_hapus.php<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')"><button class="btn btn-danger">Hapus</button></a> -->
                     
                     <form method="POST">
