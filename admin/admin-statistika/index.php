@@ -98,9 +98,14 @@ if(isset($_POST['klik_delete'])){
                   <td><?php echo $row['jenis_data']; ?></td>
                   <td><?php echo $row['jumlah']; ?></td>
                   <td>
-                    <a href="edit_penduduk.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                  <a href="edit_penduduk.php?id=<?= $row['id'] ?>">
+                    <button  class="ikon2">
+                      <img class="ikon2" src="../img/edit.png" alt="">
+                    </button></a>
                     <form method="POST">
-                      <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
+                      <button class="ikon1" type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')">
+                      <img class="ikon1"  src="../img/trash.png" alt="">
+                      </button>
                     </form>
                   </td>
                 </tr>
@@ -149,9 +154,14 @@ if(isset($_POST['klik_delete'])){
                   <td><?php echo $row['jumlah_laki2']; ?></td>
                   <td><?php echo $row['jumlah_perempuan']; ?></td>
                   <td>
-                    <a href="edit_pekerjaan.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                  <a href="edit_pekerjaan.php?id=<?= $row['id'] ?>">
+                    <button  class="ikon2">
+                      <img class="ikon2" src="../img/edit.png" alt="">
+                    </button></a>
                     <form method="POST">
-                      <button type="submit" name="tombol_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
+                      <button class="ikon1" type="submit" name="tombol_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')">
+                      <img class="ikon1"  src="../img/trash.png" alt="">
+                      </button>
                     </form>
                   </td>
                 </tr>
@@ -198,9 +208,14 @@ if(isset($_POST['klik_delete'])){
                   <td><?php echo $row['nama_dusun']; ?></td>
                   <td><?php echo $row['jumlah_penduduk']; ?></td>
                   <td>
-                    <a href="edit_dusun.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                    <a href="edit_dusun.php?id=<?= $row['id'] ?>">
+                    <button  class="ikon2">
+                      <img class="ikon2" src="../img/edit.png" alt="">
+                    </button></a>
                     <form method="POST">
-                      <button type="submit" name="klik_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
+                      <button class="ikon1" type="submit" name="klik_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')">
+                      <img class="ikon1"  src="../img/trash.png" alt="">
+                      </button>
                     </form>
                   </td>
                 </tr>
