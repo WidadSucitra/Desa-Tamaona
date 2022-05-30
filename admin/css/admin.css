@@ -4522,6 +4522,26 @@ input[type="button"].btn-block {
 /* --------------------------------------------------------------
 INDEX-ADMIN-HOME
 --------------------------------------------------------------*/
+.container-fluid td button img.ikon2, .container-fluid td button img.ikon1{
+  width: 20px;
+}
+
+.container-fluid button.ikon2{
+  background-color: #ffba00;
+}
+
+.container-fluid td button, .container-fluid td button{
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  border: none;
+  margin: 5px 0;
+}
+
+.container-fluid button.ikon1{
+  background-color: red;
+}
+
 .container-fluid .index-home{
   margin: 20px 30px;
 }

@@ -78,7 +78,10 @@ if(isset($_POST['submit_delete'])){
                   <td><img src="../uploads/potensi_wisata/<?php echo $row['gambar']; ?>"></td>
                   <td width=50%><?php echo substr($row['deskripsi'], 0, 1000); ?>...</td>
                   <td class="btn-index">
-                    <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                    <a href="edit.php?id=<?= $row['id'] ?>">
+                    <button  class="ikon2">
+                      <img class="ikon2" src="../img/edit.png" alt="">
+                    </button></a>
                     <form method="POST">
                       <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" class="btn btn-danger">Hapus</button>
                     </form>

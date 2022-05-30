@@ -108,9 +108,14 @@ if(isset($_POST['submit_delete'])){
                   <td><?php echo substr($row['ket'], 0, 1000); ?></td>
                   <td><img src="../uploads/fasilitas/<?php echo $row['image_url']; ?>"></td>
                   <td>
-                    <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                    <a href="edit.php?id=<?= $row['id'] ?>">
+                    <button  class="ikon2">
+                      <img class="ikon2" src="../img/edit.png" alt="">
+                    </button></a>
                     <form method="POST">
-                      <button type="submit" name="tombol_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
+                      <button class="ikon1" type="submit" name="tombol_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')">
+                      <img class="ikon1"  src="../img/trash.png" alt="">
+                      </button>
                     </form>
                   </td>
                 </tr>
@@ -159,9 +164,14 @@ if(isset($_POST['submit_delete'])){
                   <td><?php echo substr($row['ket'], 0, 1000); ?></td>
                   <td><img src="../uploads/layanan/<?php echo $row['image_url']; ?>"></td>
                   <td>
-                    <a href="edit_layanan.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                    <a href="edit_layanan.php?id=<?= $row['id'] ?>">
+                    <button  class="ikon2">
+                      <img class="ikon2" src="../img/edit.png" alt="">
+                    </button></a>
                     <form method="POST">
-                      <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
+                      <button class="ikon1" type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')">
+                      <img class="ikon1"  src="../img/trash.png" alt="">
+                      </button>
                     </form>
                   </td>
                 </tr>
