@@ -96,7 +96,7 @@ if(isset($_POST['submit_delete'])){
                   </td>
                   
                   <td class="btn-index">
-                  <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
+                  <!-- <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a> -->
                 
                     <form method="POST">
                       <button type="submit" name="submit_delete" value="<?= $row['id'] ?>" onclick="return confirm('Anda yakin ingin hapus data ini?')" class="btn btn-danger">Hapus</button>
