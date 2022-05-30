@@ -1,10 +1,13 @@
 <?php 
 include "navbar.php"; 
 include "admin/config.php";
+$pekerjaan = mysqli_query($conn, "SELECT * FROM pekerjaan order by ID asc");
+$jumlah_laki2 = mysqli_query($conn, "SELECT jumlah_laki2 FROM pekerjaan order by ID asc");
+$jumlah_perempuan = mysqli_query($conn, "SELECT jumlah_perempuan FROM pekerjaan order by ID asc");
 ?>
 
 
-  <!-- jumbotron -->
+<!-- jumbotron -->
   <section class="d-flex align-items-center">
     <div class="jumbotron-potensi jumbotron">
       <h1 class="container">Statistika Penduduk</h1>
@@ -70,7 +73,8 @@ include "admin/config.php";
             <div class="status-perkawinan">
                 <div class="container">
                     <div class="row">
-                        <h3>Statistik Status Kawin Penduduk</h3>
+                        <h3>Statistik Pekerjaan Penduduk</h3>
+                        <p><?php while ($p = mysqli_fetch_array($pekerjaan)) { echo '"' . $p['pekerjaan'] . '",';}?></p>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-8 mt-5">
@@ -80,7 +84,32 @@ include "admin/config.php";
                 </div>
             </div>
 
-            <div class="status-pendidikan">
+            <script type="text/javascript">
+                var canvasElement = document.getElementById("cookieChart");
+  
+                var config = {
+                    type: "bar",
+                    data:{
+                        labels: [<?php while ($p = mysqli_fetch_array($pekerjaan)) { echo '"' . $p['pekerjaan'] . '",';}?>],
+                        datasets:[ 
+                            {
+                                label: "Laki-Laki",
+                                data: [<?php while ($p = mysqli_fetch_array($jumlah_laki2)) { echo '"' . $p['jumlah_laki2'] . '",';}?>],
+                                backgroundColor: "#609773"
+                            },
+                            {
+                                label: "Perempuan",
+                                data: [<?php while ($p = mysqli_fetch_array($jumlah_perempuan)) { echo '"' . $p['jumlah_perempuan'] . '",';}?>],
+                                backgroundColor: "yellow"
+                            },
+                        ],
+                    },
+                };
+
+                var cookieChart = new Chart(canvasElement,conn);
+            </script>
+
+            <!-- <div class="status-pendidikan">
                 <div class="container">
                     <div class="row">
                         <h3>Statistik Pendidikan Penduduk</h3>
@@ -91,7 +120,7 @@ include "admin/config.php";
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="daftar-dusun">
                 <div class="container">
