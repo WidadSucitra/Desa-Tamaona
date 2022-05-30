@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                           <input type="text" id="perusahaan" name="perusahaan" placeholder="Perusahaan">
                           <input type="text" id="telepone" name="telepone" placeholder="Telepone">
                           <textarea rows="10" id="pesan" name="pesan" placeholder="Pesan"></textarea>
-                          <button type="submit" name="submit" value="Upload"><a href="contact.php" onclick="return alert('Pesan telah terkirim!')" >Kirim</a></button>
+                          <button type="submit" name="submit" value="Upload"><a href="contact.php">Kirim</a></button>
                       </form>
                   </div>
 

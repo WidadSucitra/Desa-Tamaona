@@ -90,11 +90,11 @@ $jumlah_perempuan = mysqli_query($conn, "SELECT jumlah_perempuan FROM pekerjaan 
                 var config = {
                     type: "bar",
                     data:{
-                        labels: [<?php while ($p = mysqli_fetch_array($pekerjaan)) { echo '"' . $p['pekerjaan'] . '",';}?>],
+                        labels: [<?php while ($p = mysqli_fetch_array($pekerjaan)) { echo '"'.$p['pekerjaan'].'",';}?>],
                         datasets:[ 
                             {
                                 label: "Laki-Laki",
-                                data: [<?php while ($p = mysqli_fetch_array($jumlah_laki2)) { echo '"' . $p['jumlah_laki2'] . '",';}?>],
+                                data: [<?php while ($p = mysqli_fetch_array($jumlah_laki2)) { echo '"' .$p['jumlah_laki2']. '",';}?>],
                                 backgroundColor: "#609773"
                             },
                             {
