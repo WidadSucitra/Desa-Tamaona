@@ -1,9 +1,6 @@
 <?php 
 include "navbar.php"; 
 include "admin/config.php";
-$pekerjaan = mysqli_query($conn, "SELECT * FROM pekerjaan order by ID asc");
-$jumlah_laki2 = mysqli_query($conn, "SELECT jumlah_laki2 FROM pekerjaan order by ID asc");
-$jumlah_perempuan = mysqli_query($conn, "SELECT jumlah_perempuan FROM pekerjaan order by ID asc");
 ?>
 
 
@@ -74,7 +71,6 @@ $jumlah_perempuan = mysqli_query($conn, "SELECT jumlah_perempuan FROM pekerjaan 
                 <div class="container">
                     <div class="row">
                         <h3>Statistik Pekerjaan Penduduk</h3>
-                        <p><?php while ($p = mysqli_fetch_array($pekerjaan)) { echo '"' . $p['pekerjaan'] . '",';}?></p>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-8 mt-5">
@@ -84,32 +80,48 @@ $jumlah_perempuan = mysqli_query($conn, "SELECT jumlah_perempuan FROM pekerjaan 
                 </div>
             </div>
 
-            <script type="text/javascript">
-                var canvasElement = document.getElementById("cookieChart");
-  
-                var config = {
-                    type: "bar",
-                    data:{
-                        labels: [<?php while ($p = mysqli_fetch_array($pekerjaan)) { echo '"'.$p['pekerjaan'].'",';}?>],
-                        datasets:[ 
-                            {
-                                label: "Laki-Laki",
-                                data: [<?php while ($p = mysqli_fetch_array($jumlah_laki2)) { echo '"' .$p['jumlah_laki2']. '",';}?>],
-                                backgroundColor: "#609773"
-                            },
-                            {
-                                label: "Perempuan",
-                                data: [<?php while ($p = mysqli_fetch_array($jumlah_perempuan)) { echo '"' . $p['jumlah_perempuan'] . '",';}?>],
-                                backgroundColor: "yellow"
-                            },
-                        ],
-                    },
-                };
+            <script>
+                $.getJSON( "http://localhost/tamaona/data.php", function( data ) {
 
-                var cookieChart = new Chart(canvasElement,conn);
+                    var isi_labels = [];
+                    var isi_data1=[];
+                    var isi_data2=[];
+
+                    $(data).each(function(i){         
+                        isi_labels.push(data[i].pekerjaan); 
+                        isi_data1.push(data[i].jumlah_laki2);
+                        isi_data2.push(data[i].jumlah_perempuan);
+                    });    
+                    
+                    console.log(isi_labels);
+                    console.log(isi_data1);
+                    console.log(isi_data2);
+                    
+                    var canvasElement = document.getElementById("cookieChart").getContext('2d');
+    
+                    var myChart = new Chart(canvasElement,{
+                        type: "bar",
+                        data: {
+                            label: isi_labels,
+                            datasets:[
+                                {
+                                    label: "Laki-Laki",
+                                    data: isi_data1,
+                                    backgroundColor: "#609773"
+                                },
+                                {
+                                    label: "Perempuan",
+                                    data: isi_data2,
+                                    backgroundColor: "yellow"
+                                },
+                            ],
+                        },
+                    });
+                });
+
             </script>
 
-            <!-- <div class="status-pendidikan">
+            <div class="status-pendidikan">
                 <div class="container">
                     <div class="row">
                         <h3>Statistik Pendidikan Penduduk</h3>
@@ -120,7 +132,7 @@ $jumlah_perempuan = mysqli_query($conn, "SELECT jumlah_perempuan FROM pekerjaan 
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <div class="daftar-dusun">
                 <div class="container">
