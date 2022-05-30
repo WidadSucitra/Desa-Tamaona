@@ -38,7 +38,7 @@ include "admin/config.php";
 
           while ($row = mysqli_fetch_assoc($result)) {
         ?>
-        <div class="row potensi-komoditi berwarna">
+        <div class="row potensi-komoditi">
           <div class="col-md-6">
             <img src="admin/uploads/potensi_komoditi/<?php echo $row['gambar']; ?>">
           </div>   

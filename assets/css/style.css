@@ -829,7 +829,7 @@ POTENSI.HTML section potensi
   width: 100%;
 }
 
-.potensi-wilayah:nth-child(even){
+.potensi-wilayah:nth-child(even), .potensi-komoditi:nth-child(even){
   background-color: #6097737b;
   border-radius: 20px;
 }
