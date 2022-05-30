@@ -26,26 +26,45 @@ include "admin/config.php";
       
 
       <!-- isi website -->
+      <?php
+          $query = "SELECT * FROM pengaduan WHERE active='1' ORDER BY id ASC";
+          $result = mysqli_query($conn, $query);
 
+          if(!$result) {
+            die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+          }
+            else{
+              echo"<div class='error'></div>";
+          }
+          $no = 1;
+
+          while ($row = mysqli_fetch_assoc($result)) {
+        ?>
       <div class="pengaduan">
           <div class="row pengaduan-kegiatan">
               <div class="col-md-3">
-                <img src="assets/img/pengaduan/jembatan.jpg">
+                <img src="admin/uploads/pengaduan/<?php echo $row['dokumentasi']; ?>">
               </div>
               <div class="col-md-8">
-                  <h2>Jembatan Putus</h2>
-                  <!-- <p class="waktu">28/02/2021</p> -->
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
+                  <h2><?php echo $row['judul_pengaduan']; ?></h2>
+                  
+                  <p><?php echo substr($row['isi_pengaduan'], 0, 1000); ?></p>
+                  
+
               </div>
           </div>
+          <?php
+            $no++;
+          }
+          ?>  
 
-          <div class="row pengaduan-kegiatan">
+          <!-- <div class="row pengaduan-kegiatan">
             <div class="col-md-3">
               <img src="assets/img/pengaduan/jembatan.jpg">
             </div>
             <div class="col-md-8">
                 <h2>Pengaduan 2</h2>
-                <!-- <p class="waktu">28/02/2021</p> -->
+                
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
             </div>
         </div>
@@ -56,7 +75,7 @@ include "admin/config.php";
             </div>
             <div class="col-md-8">
                 <h2>Pengaduan 3</h2>
-                <!-- <p class="waktu">28/02/2021</p> -->
+                
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
             </div>
         </div>
@@ -67,10 +86,10 @@ include "admin/config.php";
             </div>
             <div class="col-md-8">
                 <h2>Pengaduan 4</h2>
-                <!-- <p class="waktu">28/02/2021</p> -->
+                
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
             </div>
-        </div>
+        </div> -->
           
       </div>
 

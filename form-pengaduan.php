@@ -71,7 +71,7 @@ if (isset($_POST['submit']) && isset($_FILES['dokumentasi'])) {
                 </tr>
 
             </table>
-            <button type="submit" name="submit" value="Upload" class="kirim">Kirim</button>
+            <button type="submit" name="submit" value="Upload" class="kirim" onclick="return alert('Pengaduan telah masuk!')" class="btn btn-danger" >Kirim</button>
           </form>
 
           
