@@ -27,7 +27,7 @@ include "admin/config.php";
 
       <!-- isi website -->
       <?php
-          $query = "SELECT * FROM pengaduan WHERE active='' ORDER BY id ASC";
+          $query = "SELECT * FROM pengaduan WHERE active='1' ORDER BY id ASC";
           $result = mysqli_query($conn, $query);
 
           if(!$result) {

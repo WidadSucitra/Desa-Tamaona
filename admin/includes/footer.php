@@ -24,9 +24,9 @@
           data:{val:val,id:id},
           success :function(result){
             if(result == '0'){
-              $('#str'+id).html('Active');
-            } else{
               $('#str'+id).html('Disactive');
+            } else{
+              $('#str'+id).html('Active');
             }
           }
         });

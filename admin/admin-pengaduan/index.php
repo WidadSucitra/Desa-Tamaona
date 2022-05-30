@@ -81,17 +81,18 @@ if(isset($_POST['submit_delete'])){
                   <td>
                     <?php 
                     if($row['active']==0){
-                      echo "<p id=str".$row['id'].">Active</p>";
-                    } else{
                       echo "<p id=str".$row['id'].">Disactive</p>";
+                    } else{
+                      echo "<p id=str".$row['id'].">Active</p>";
                     }
                     ?>
                   </td>
                   
                   <td>
                     <select onchange="active_disactive(this.value,<?php echo $row['id'];?>)">
-                      <option value="1">Disactive</option>
-                      <option value="0">Active</option>
+                    <option value=""></option>
+                      <option value="0">Disactive</option>
+                      <option value="1">Active</option>
                     </select>
                   </td>
                   
