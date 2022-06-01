@@ -58,7 +58,7 @@ include "admin/config.php";
 
           while ($row = mysqli_fetch_assoc($result)) {
       ?>
-      <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+      <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
         <h3><?php echo $row['judul']; ?></h3>
         <p><?php echo $row['deskripsi']; ?>
         <img src="admin/uploads/home/<?php echo $row['gambar']; ?>" alt="" class="img-fluid">
