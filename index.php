@@ -46,63 +46,103 @@ include "admin/config.php";
  <!-- ======= profile Section ======= -->
  <section id="profile" class="profile">
   <div>
-    <div class="row container justify-content-center">
+  <div class="row container justify-content-center">
+      <?php
+          $query = "SELECT * FROM profil_desa ORDER BY id ASC";
+          $result = mysqli_query($conn, $query);
+
+          if(!$result) {
+            die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+          }
+          $no = 1;
+
+          while ($row = mysqli_fetch_assoc($result)) {
+      ?>
       <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-        <h3>Desa Tamaona</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quia dolorum pariatur, nam velit expedita voluptas asperiores quis modi praesentium est sit ducimus . Csit amet conseetur adipisicing elit.  
-        <img src="assets/img/raihan-n-aziz-KWXWGX994kQ-unsplash.jpg" alt="" class="img-fluid">
+        <h3><?php echo $row['judul']; ?></h3>
+        <p><?php echo $row['deskripsi']; ?>
+        <img src="admin/uploads/home/<?php echo $row['gambar']; ?>" alt="" class="img-fluid">
       </div>
 
-      <div class="col-xl-5 col-lg-4 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-3 px-lg-2">
+      <!-- <div class="col-xl-5 col-lg-4 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-3 px-lg-2">
         <h3>Potensi dan Kebudayaan</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quia dolorum pariatur, nam velit expedita voluptas asperiores quis modi praesentium est sit ducimus. Vvelit expedita voluptas asperiores quis modi praesentium est sit ducimus </p> 
         <a href="potensi.html" class="btn-get-started scrollto">Kunjungi Kami</a>
         <img src="assets/img/ilya-zoria-5pGT32puBKo-unsplash.jpg" alt="" class="img-fluid">
       </div>
     </div>
-  </div>
+  </div> -->
+    <?php
+        }
+    ?>
  </section>
 
   <!-- ======= Sisper Section ======= -->
   <section id="sisper" class="sisper">
     <div class="container-fluid">
-    
-    <div class="row container justify-content-center">
+      <div class="row container justify-content-center">
+      <?php
+          $query = "SELECT * FROM struktur ORDER BY id ASC";
+          $result = mysqli_query($conn, $query);
+
+          if(!$result) {
+            die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+          }
+          $no = 1;
+
+          while ($row = mysqli_fetch_assoc($result)) {
+      ?>
       <div class="col-md-10">
         <div class="section-title">
           <h2 class="word">Sistem Pemerintahan</h2>
         </div>
-        <img src="assets/img/struktur.png" alt="" class="img-fluid">
+        <img src="admin/uploads/home/<?php echo $row['gambar']; ?>" alt="" class="img-fluid">
       </div>
     </div>
     </div>
+      <?php
+          }
+      ?>
   </section>
 
   <!-- ======= Visi Misi Section ======= -->
   <section id="vismis" class="vismis">
     <div class="container">
+    <?php
+          $query = "SELECT * FROM visimisi ORDER BY id ASC";
+          $result = mysqli_query($conn, $query);
 
+          if(!$result) {
+            die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+          }
+          $no = 1;
+
+          while ($row = mysqli_fetch_assoc($result)) {
+      ?>
       <div class="section-title">
         <h2>Visi Misi</h2>
       </div>
 
       <div class="row visi-misi potensi-wilayah-batas justify-content-center">
         <div class="card potensi-wilayah-batas" style="width: 25rem;">
-            <h5>Visi</h5>
-            <img class="card-img-top" src="assets/img/visi.png" alt="Card image cap">
+            <h5><?php echo $row['judul']; ?></h5>
+            <img class="card-img-top" src="admin/uploads/home/<?php echo $row['gambar']; ?>" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipi sicing elit. Minus quia dolorum pariatur, nam velit expedita voptas asperiores quis modi praesentium est sit ducimus. Velit expedita voluptas asperiores quis modi praesentium est sit ducimus</p>
+              <p class="card-text"><?php echo $row['deskripsi']; ?></p>
             </div>
         </div>
-        <div class="card potensi-wilayah-batas" style="width: 25rem;">
+        <!-- <div class="card potensi-wilayah-batas" style="width: 25rem;">
             <h5>Misi</h5>
             <img class="card-img-top" src="assets/img/misi.png" alt="Card image cap">
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipi sicing elit. Minus quia dolorum pariatur, nam velit expedita voptas asperiores quis modi praesentium est sit ducimus. Velit expedita voluptas asperiores quis modi praesentium est sit ducimus.</p>
             </div>
-        </div>
+        </div> -->
       </div>
     </div>
+      <?php
+          }
+      ?>
   </section><!-- End vismis Section -->
 
   <!-- ======= Loc Section ======= -->
