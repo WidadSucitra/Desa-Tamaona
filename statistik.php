@@ -123,6 +123,17 @@ include "admin/config.php";
 
             <div class="daftar-dusun">
                 <div class="container">
+                    <?php
+                    $query = "SELECT * FROM dusun_desa ORDER BY id ASC";
+                    $result = mysqli_query($conn, $query);
+
+                    if(!$result) {
+                        die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+                    }
+                    $no = 1;
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
                     <div class="row">
                         <h3>Daftar Dusun</h3>
                     </div>
@@ -135,23 +146,16 @@ include "admin/config.php";
                                     <th>Jumlah Penduduk</th>
                                 </tr>
                                 <tr>
-                                    <td>1.</td>
-                                    <td>Dusun Galong Lohe</td>
-                                    <td>25</td>
-                                </tr>
-                                <tr>
-                                    <td>2.</td>
-                                    <td>Dusun Galong Lohe</td>
-                                    <td>35</td>
-                                </tr>
-                                <tr>
-                                    <td>3.</td>
-                                    <td>Dusun Galong Lohe</td>
-                                    <td>33</td>
+                                    <td><?php echo $no; ?></td>
+                                    <td><?php echo $row['nama_dusun']; ?></td>
+                                    <td><?php echo $row['jumlah_penduduk']; ?></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
       </section>

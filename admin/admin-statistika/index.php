@@ -3,15 +3,28 @@ ob_start();
 include "../config.php";
 include "../includes/header.php"; 
 include "../includes/navbar.php"; 
-        		
+
+// PENDUDUK DESA
 if(isset($_POST['submit_delete'])){
   $penduduk_id = $_POST['submit_delete'];
 
-  $query = "DELETE FROM penduduk_desa WHERE id='$penduduk_id' LIMIT 1";
+  $check_img_query = "SELECT * FROM penduduk WHERE id=$penduduk_id' LIMIT 1";
+  $img_res = mysqli_query($conn,$query);
+  $res_data = mysqli_fetch_array($img_res);
+
+  $image = $res_data['url_gambar'];
+
+  $query = "DELETE FROM penduduk WHERE id='$penduduk_id' LIMIT 1";
   $query_run = mysqli_query($conn,$query);
 
   if($query_run)
     {
+      if(file_exists('../uploads/statistik/'.$image)){
+          unlink("../uploads/statistik/'.$image");
+      }
+      move_uploaded_file($_FILES['url_gambar']['tmp_name'], '../uploads/statistik/'.$update_filename);
+     
+        
       // $_SESSION['message'] = "Data berhasil ditambahkan!";
       header('Location: index.php');
       exit(0);
@@ -24,6 +37,7 @@ if(isset($_POST['submit_delete'])){
     }
 }
 
+// PEKERJAAN
 if(isset($_POST['tombol_delete'])){
   $pekerjaan_id = $_POST['tombol_delete'];
 
@@ -44,6 +58,7 @@ if(isset($_POST['tombol_delete'])){
     }
 }
 
+// DUSUN DESA
 if(isset($_POST['klik_delete'])){
   $dusun_id = $_POST['klik_delete'];
 
@@ -65,7 +80,7 @@ if(isset($_POST['klik_delete'])){
 }
 
 ?>
-
+        <!-- PENDUDUK DESA -->
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <section class="index-potensi">
@@ -78,12 +93,13 @@ if(isset($_POST['klik_delete'])){
                   <th scope="col">#</th>
                   <th scope="col">Jenis Data</th>
                   <th scope="col">Jumlah</th>
+                  <th scope="col">Gambar</th>
                   <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>
               <?php
-                  $query = "SELECT * FROM penduduk_desa ORDER BY id ASC";
+                  $query = "SELECT * FROM penduduk ORDER BY id ASC";
                   $result = mysqli_query($conn, $query);
 
                   if(!$result) {
@@ -97,6 +113,7 @@ if(isset($_POST['klik_delete'])){
                   <td><?php echo $no; ?></td>
                   <td><?php echo $row['jenis_data']; ?></td>
                   <td><?php echo $row['jumlah']; ?></td>
+                  <td><img src="../uploads/statistik/<?php echo $row['url_gambar']; ?>"></td>
                   <td>
                   <a href="edit_penduduk.php?id=<?= $row['id'] ?>">
                     <button  class="ikon2">
@@ -121,6 +138,7 @@ if(isset($_POST['klik_delete'])){
 
         </div>
 
+        <!-- PEKERJAAN-->
         <div class="container-fluid">
           <section class="index-potensi">
             <!-- Page Heading -->
@@ -166,8 +184,7 @@ if(isset($_POST['klik_delete'])){
                   </td>
                 </tr>
                 <?php
-                  $no++;
-                }
+                  }
                 ?>
               </tbody>
               </table>
@@ -177,6 +194,7 @@ if(isset($_POST['klik_delete'])){
 
         </div>
 
+        <!-- DUSUN DESA -->
         <div class="container-fluid">
           <section class="index-potensi">
             <!-- Page Heading -->
@@ -220,8 +238,7 @@ if(isset($_POST['klik_delete'])){
                   </td>
                 </tr>
                 <?php
-                  $no++;
-                }
+                  }
                 ?>
               </tbody>
               </table>
