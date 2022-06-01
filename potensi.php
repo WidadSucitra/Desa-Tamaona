@@ -35,13 +35,13 @@ include "admin/config.php";
                 </div>   
               </div>
             <?php } else {?>
-              <div class="row potensi-wilayah berwarna">
+              <div class="row potensi-wilayah">
               <div class="col-md-6">
-                <img src="assets/img/potensi/jumbotron-potensi.jpg" alt="">
+                <img src="admin/uploads/jenis_potensi/<?php echo $row['image_url']; ?>">
               </div>   
               <div class="col-md-6">
-                <h2>Sarana dan Prasarana</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
+                <h2><?php echo $row['jenis_potensi']; ?></h2>
+                <p><?php echo $row['ket'];?></p>
               </div>  
             </div>
             <?php }
