@@ -8,7 +8,7 @@ include "admin/config.php";
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <h1>Selamat Datang di <br> Desa Tamaona</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quia dolorum pariatur, <br> nam velit expedita voluptas asperiores quis modi praesentium est sit ducimus</p>
+      <p>Melalui website ini diharapkan dapat menjadi media komunikasi dan<br>transparansi pemerintah Desa Tamaona untuk seluruh masyarakat.</p>
     </div>
   </section><!-- End Hero -->
 
@@ -19,22 +19,22 @@ include "admin/config.php";
       <div class="col-10 info-panel">
         <div class="row">
           <div class="col-lg">
-            <a href="index.html#profile">
+            <a href="index.php#profile">
             <img src="assets/img/home.png" float-left" alt="">
             <h4>Profil Desa</h4> </a> 
           </div>
           <div class="col-lg">
-            <a href="index.html#sisper">
+            <a href="index.php#sisper">
             <img src="assets/img/group.png"float-left" alt="">
           <h4>Struktur Pemerintahan</h4> </a>
           </div>
           <div class="col-lg">
-            <a href="index.html#vismis">
+            <a href="index.php#vismis">
             <img src="assets/img/target.png"float-left" alt="">
             <h4>Visi Misi</h4> </a>
           </div>
           <div class="col-lg">
-            <a href="index.html#pin">
+            <a href="index.php#pin">
             <img src="assets/img/map.png"float-left" alt="">
             <h4>Lokasi</h4> </a>
           </div>
