@@ -37,18 +37,27 @@ include "admin/config.php";
           $no = 1;
 
           while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-        <div class="row potensi-komoditi">
-          <div class="col-md-6">
-            <img src="admin/uploads/potensi_komoditi/<?php echo $row['gambar']; ?>">
-          </div>   
-          <div class="col-md-6">
-            <h2><?php echo $row['jenis_komoditi']; ?></h2>
-            <p><?php echo substr($row['deskripsi'], 0, 1000); ?></p>
-          </div>  
-        </div>
-        <?php
-          $no++;
+            if(($row['id'])%2==0){?>
+              <div class="row potensi-komoditi">
+              <div class="col-md-6">
+                <img src="admin/uploads/potensi_komoditi/<?php echo $row['gambar']; ?>">
+              </div>   
+              <div class="col-md-6">
+                <h2><?php echo $row['jenis_komoditi']; ?></h2>
+                <p><?php echo substr($row['deskripsi'], 0, 1000); ?></p>
+              </div>  
+            </div>
+            <?php }else{?>
+                  <div class="row potensi-komoditi">
+                  <div class="col-md-6">
+                    <h2><?php echo $row['jenis_komoditi']; ?></h2>
+                    <p><?php echo substr($row['deskripsi'], 0, 1000); ?></p>
+                  </div>  
+                  <div class="col-md-6">
+                    <img src="admin/uploads/potensi_komoditi/<?php echo $row['gambar']; ?>">
+                  </div>   
+                </div>
+            <?php }
         }
         ?>
 

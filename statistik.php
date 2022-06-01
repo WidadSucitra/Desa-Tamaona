@@ -81,7 +81,7 @@ include "admin/config.php";
             </div>
 
             <script>
-                $.getJSON( "http://localhost/tamaona/data.php", function( data ) {
+                $.getJSON( "http://localhost/desa-tamaona/data.php", function( data ) {
 
                     var isi_labels = [];
                     var isi_data1=[];
@@ -93,9 +93,9 @@ include "admin/config.php";
                         isi_data2.push(data[i].jumlah_perempuan);
                     });    
                     
-                    console.log(isi_labels);
-                    console.log(isi_data1);
-                    console.log(isi_data2);
+                    // console.log(isi_labels);
+                    // console.log(isi_data1);
+                    // console.log(isi_data2);
                     
                     var canvasElement = document.getElementById("cookieChart").getContext('2d');
     
@@ -120,19 +120,6 @@ include "admin/config.php";
                 });
 
             </script>
-
-            <div class="status-pendidikan">
-                <div class="container">
-                    <div class="row">
-                        <h3>Statistik Pendidikan Penduduk</h3>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 mt-5">
-                        <canvas id="cookieChart2" width="250" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="daftar-dusun">
                 <div class="container">

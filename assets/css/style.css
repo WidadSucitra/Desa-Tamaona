@@ -580,7 +580,7 @@ STATISTIK.HTML
 }
 
 .statistik .row h3{
-  font-size: 18px;
+  text-align: center;
 }
 
 .statistik .statistik-penduduk .col{
@@ -987,7 +987,7 @@ SARANA.HTML
   margin-bottom: 0;
 }
 
-.potensi.sarana h2{
+.potensi.sarana h2, .statistik .row h3{
   font-size: 20px;
 }
 
@@ -1037,7 +1037,7 @@ SARANA.HTML
   background-color: #fff;
 }
 
-#masjid, .status-perkawinan, .daftar-dusun{
+#masjid, .status-perkawinan{
   margin: 100px 0;
   background-color: #fff;
   padding: 50px 0 100px;
@@ -1078,7 +1078,7 @@ SARANA.HTML
     margin-bottom: 0;
   }
 
-  .potensi.sarana h2{
+  .potensi.sarana h2, .statistik .row h3{
     font-size: 24px;
   }
 
@@ -1125,7 +1125,7 @@ SARANA.HTML
     padding-top: 80px;
   }
   
-  #sekolah,#masjid, .status-perkawinan, .daftar-dusun{
+  #sekolah,#masjid, .status-perkawinan{
     margin: 100px 0;
     background-color: #fff;
     padding: 50px 0 100px;
