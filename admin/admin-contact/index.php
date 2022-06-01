@@ -65,7 +65,7 @@ if(isset($_POST['submit_delete'])){
                   <td><?php echo $row['email']; ?></td>
                   <td><?php echo $row['perusahaan']; ?></td>
                   <td><?php echo $row['telepone']; ?></td>
-                  <td width=50%><?php echo substr($row['pesan'], 0, 1000); ?></td>
+                  <td width=50%><?php echo $row['pesan']; ?></td>
                   
                   <td class="btn-index">
                   <!-- <a href="edit.php?id=<?= $row['id'] ?>"><button class="btn btn-warning">Edit</button></a>
