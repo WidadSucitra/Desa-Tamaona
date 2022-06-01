@@ -37,7 +37,7 @@ if (isset($_POST['submit'])){
         }
 
 
-        $_SESSION['message'] = "Update berhasil!";
+        // $_SESSION['message'] = "Update berhasil!";
         header('Location: edit_profildesa.php?id='.$profil_id);
         exit(0);
     }

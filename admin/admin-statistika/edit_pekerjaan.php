@@ -17,7 +17,7 @@ if (isset($_POST['submit'])){
 
     if($query_run)
     {        
-        $_SESSION['message'] = "Update berhasil!";
+        // $_SESSION['message'] = "Update berhasil!";
         header('Location: edit_pekerjaan.php?id='.$penduduk_id);
         exit(0);
     }

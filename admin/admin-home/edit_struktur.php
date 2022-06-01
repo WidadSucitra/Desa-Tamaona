@@ -35,7 +35,7 @@ if (isset($_POST['submit'])){
         }
 
 
-        $_SESSION['message'] = "Update berhasil!";
+        // $_SESSION['message'] = "Update berhasil!";
         header('Location: edit_struktur.php?id='.$struktur_id);
         exit(0);
     }
