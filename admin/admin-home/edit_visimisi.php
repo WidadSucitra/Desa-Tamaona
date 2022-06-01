@@ -40,7 +40,7 @@ if (isset($_POST['submit'])){
 
 
         // $_SESSION['message'] = "Update berhasil!";
-        header('Location: edit_visimisi.php?id='.$visimisi_id);
+        header('Location: index.php?id='.$visimisi_id);
         exit(0);
     }
     else
