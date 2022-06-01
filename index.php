@@ -108,7 +108,13 @@ include "admin/config.php";
   <!-- ======= Visi Misi Section ======= -->
   <section id="vismis" class="vismis">
     <div class="container">
-    <?php
+      <div class="section-title">
+        <h2>Visi Misi</h2>
+      </div>
+
+      <div class="row visi-misi-accordin">
+        <div class="accordion">
+          <?php
           $query = "SELECT * FROM visimisi ORDER BY id ASC";
           $result = mysqli_query($conn, $query);
 
@@ -117,32 +123,14 @@ include "admin/config.php";
           }
           $no = 1;
 
-          while ($row = mysqli_fetch_assoc($result)) {
-      ?>
-      <div class="section-title">
-        <h2>Visi Misi</h2>
-      </div>
-
-      <div class="row visi-misi potensi-wilayah-batas justify-content-center">
-        <div class="card potensi-wilayah-batas" style="width: 25rem;">
-            <h5><?php echo $row['judul']; ?></h5>
-            <img class="card-img-top" src="admin/uploads/home/<?php echo $row['gambar']; ?>" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text"><?php echo $row['deskripsi']; ?></p>
-            </div>
+          while ($row = mysqli_fetch_assoc($result)) { ?>
+              <input type="radio" name="select" class="accordion-select" checked />
+              <div class="accordion-title"><span><?php echo $row['judul']; ?></span></div>
+              <div class="accordion-content"><?php echo $row['deskripsi']; ?></div> 
+              <?php  }  ?>
         </div>
-        <!-- <div class="card potensi-wilayah-batas" style="width: 25rem;">
-            <h5>Misi</h5>
-            <img class="card-img-top" src="assets/img/misi.png" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipi sicing elit. Minus quia dolorum pariatur, nam velit expedita voptas asperiores quis modi praesentium est sit ducimus. Velit expedita voluptas asperiores quis modi praesentium est sit ducimus.</p>
-            </div>
-        </div> -->
       </div>
     </div>
-      <?php
-          }
-      ?>
   </section><!-- End vismis Section -->
 
   <!-- ======= Loc Section ======= -->

@@ -397,9 +397,8 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 POTENSI-WISATA.HTML
 --------------------------------------------------------------*/
-
-/* ACCORDIN SLIDER */
-/* .accordion {
+/* ACCORDIN */
+.accordion {
   box-sizing: border-box;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
@@ -447,23 +446,26 @@ POTENSI-WISATA.HTML
 .accordion-select:checked + .accordion-title + .accordion-content {
   margin-bottom: 0;
   margin-right: 0;
-} */
+}
 
 /* Generated styles starts here */
+.row.visi-misi-accordin{
+  width: 100%;
+}
 
 .accordion {
-  border-color: #b8ddf1;
+  border-color: #e5e5e5;
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
   flex-direction: row;
-  height: 282px;
+  height: 370px;
 } 
 
 .accordion-title,
 .accordion-select  {
-  background-color: #2ba659;
-  color: #352117;
+  background-color: #609773;
+  color: #ffffff;
   width: 65px;
   height: 100%;
   font-size: 15px;
@@ -476,12 +478,12 @@ POTENSI-WISATA.HTML
 
 .accordion-title:not(:nth-last-child(2))::after {
   border-bottom-color: transparent;
-  border-right-color: #26934f;
+  border-right-color: #ffffff;
 } 
 
 .accordion-select:hover + .accordion-title,
 .accordion-select:checked + .accordion-title {
-  background-color: #ccac38;
+  background-color: #ffba00;
 } 
 
 .accordion-title span  {	
@@ -494,14 +496,121 @@ POTENSI-WISATA.HTML
 } 
 
 .accordion-content {
-  background-color: #1d1f19;
-  color: #c7c7c7;
+  background-color: #ffffff;
+  color: #000000;
   height: 100%;
   margin-bottom: 0;
   margin-right: calc(-1 * calc(100% - 195px));
   padding: 30px;
   width: calc(100% - 195px);
 } 
+
+@media (max-width: 500px) {
+  .accordion {
+    box-sizing: border-box;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    width: 100%;
+}
+
+.accordion-select {
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.accordion-title {
+    position: relative;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border: 1px solid transparent;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.accordion-title span {
+    bottom: -33px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.accordion-content {
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+    transition: margin 0.3s ease 0.1s;
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+/* Generated styles starts here */
+
+.accordion {
+    border-color: #ffffff;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    flex-direction: column;
+    height: auto;
+} 
+
+.accordion-title,
+.accordion-select  {
+    background-color: #609773;
+    color: #ffffff;
+    width: 100%;
+    height: 65px;
+    font-size: 15px;
+}
+
+.accordion-select {
+    margin-bottom: -65px;
+    margin-right: -65px;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border-bottom-color: rgb(255, 255, 255);
+    border-right-color: transparent;
+} 
+
+.accordion-select:hover + .accordion-title,
+.accordion-select:checked + .accordion-title {
+    background-color: #ffba00;
+} 
+
+ .accordion-title span  {	
+    transform: rotate(0deg);
+    -ms-writing-mode: lr-tb;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    padding-left: 33px;
+    padding-right: 33px;
+    line-height: 65px;
+} 
+
+.accordion-content {
+    background-color: #ffffff;
+    color: #000000;
+    height: 280px;
+    margin-bottom: -280px;
+    margin-right: 0;
+    padding: 30px;
+    width: 100%;
+} 
+}
+
 
 #potensiwisata {
   padding: 0;
@@ -2387,6 +2496,14 @@ section {
 .row.potensi-wilayah-batas.visi-misi.justify-content-center{
   width: 80%;
   margin: auto;
+}
+
+.visi-misi .card.potensi-wilayah-batas:nth-child(even){
+  width: 30rem;
+}
+
+.visi-misi .card.potensi-wilayah-batas{
+  width: 17rem;
 }
 
 /*--------------------------------------------------------------

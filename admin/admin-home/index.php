@@ -72,21 +72,21 @@ if(isset($_POST['tombol_delete'])){
 if(isset($_POST['klik_delete'])){
   $visimisi_id = $_POST['klik_delete'];
 
-  $check_img_query = "SELECT * FROM visimisi WHERE id=$visimisi_id' LIMIT 1";
-  $img_res = mysqli_query($conn,$query);
-  $res_data = mysqli_fetch_array($img_res);
+  // $check_img_query = "SELECT * FROM visimisi WHERE id=$visimisi_id' LIMIT 1";
+  // $img_res = mysqli_query($conn,$query);
+  // $res_data = mysqli_fetch_array($img_res);
 
-  $image = $res_data['gambar'];
+  // $image = $res_data['gambar'];
 
   $query = "DELETE FROM visimisi WHERE id='$visimisi_id' LIMIT 1";
   $query_run = mysqli_query($conn,$query);
 
   if($query_run)
     {
-      if(file_exists('../uploads/home/'.$image)){
-          unlink("../uploads/home/'.$image");
-      }
-      move_uploaded_file($_FILES['gambar']['tmp_name'], '../uploads/home/'.$update_filename);
+      // if(file_exists('../uploads/home/'.$image)){
+      //     unlink("../uploads/home/'.$image");
+      // }
+      // move_uploaded_file($_FILES['gambar']['tmp_name'], '../uploads/home/'.$update_filename);
             
       // $_SESSION['message'] = "Data berhasil ditambahkan!";
       header('Location: index.php');
@@ -231,7 +231,7 @@ if(isset($_POST['klik_delete'])){
                   <th scope="col">No.</th>
                   <th scope="col">Judul</th>
                   <th scope="col">Deskripsi</th>
-                  <th scope="col">Gambar</th>
+                  <!-- <th scope="col">Gambar</th> -->
                   <th scope="col"></th>
                 </tr>
               </thead>
@@ -250,8 +250,7 @@ if(isset($_POST['klik_delete'])){
                 <tr>
                   <td><?php echo $no; ?></td>
                   <td><?php echo $row['judul']; ?></td>
-                  <td width=50%><?php echo substr($row['deskripsi'], 0, 1000); ?>...</td>
-                  <td><img src="../uploads/home/<?php echo $row['gambar']; ?>"></td>
+                  <td width=50%><?php echo $row['deskripsi']; ?></td>
                   <td class="btn-index">
                     <a href="edit_visimisi.php?id=<?= $row['id'] ?>">
                     <button  class="ikon2">
