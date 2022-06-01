@@ -137,7 +137,7 @@ if(isset($_POST['klik_delete'])){
                 <tr>
                   <td><?php echo $no; ?></td>
                   <td><?php echo $row['judul']; ?></td>
-                  <td width=50%><?php echo substr($row['deskripsi'], 0, 1000); ?>...</td>
+                  <td width=50%><?php echo $row['deskripsi']; ?></td>
                   <td><img src="../uploads/home/<?php echo $row['gambar']; ?>"></td>
                   <td class="btn-index">
                     <a href="edit_profildesa.php?id=<?= $row['id'] ?>">

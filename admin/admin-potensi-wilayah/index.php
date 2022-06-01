@@ -71,7 +71,7 @@ if(isset($_POST['submit_delete'])){
                 <tr>
                   <td><?php echo $no; ?></td>
                   <td><?php echo $row['batas']; ?></td>
-                  <td><?php echo substr($row['ket'], 0, 1000); ?></td>
+                  <td><?php echo $row['ket']; ?></td>
                   <td><img src="../uploads/batas/<?php echo $row['image_url']; ?>"></td>
                   <td>
                     <a href="edit.php?id=<?= $row['id'] ?>">

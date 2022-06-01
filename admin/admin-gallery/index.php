@@ -76,7 +76,7 @@ if(isset($_POST['submit_delete'])){
                   <td><?php echo $no; ?></td>
                   <td><?php echo $row['judul']; ?></td>
                   <td><img src="../uploads/galeri/<?php echo $row['gambar']; ?>"></td>
-                  <td width=50%><?php echo substr($row['deskripsi'], 0, 1000); ?>...</td>
+                  <td width=50%><?php echo $row['deskripsi']; ?></td>
                   <td class="btn-index">
                     <a href="edit.php?id=<?= $row['id'] ?>">
                     <button  class="ikon2">

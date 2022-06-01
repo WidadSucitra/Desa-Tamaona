@@ -75,7 +75,7 @@ if(isset($_POST['submit_delete'])){
                 <tr>
                   <td><?php echo $no; ?></td>
                   <td><?php echo $row['judul_pengaduan']; ?></td>
-                  <td width=50%><?php echo substr($row['isi_pengaduan'], 0, 1000); ?></td>
+                  <td width=50%><?php echo $row['isi_pengaduan']; ?></td>
                   <td><img style="width: 120px;" src="../uploads/pengaduan/<?php echo $row['dokumentasi']; ?>"></td>
                   
                   <td>
