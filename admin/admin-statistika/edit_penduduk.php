@@ -35,7 +35,7 @@ if (isset($_POST['submit'])){
             move_uploaded_file($_FILES['url_gambar']['tmp_name'], '../uploads/statistik/'.$update_filename);
         }
               
-        // $_SESSION['message'] = "Update berhasil!";
+        // // $_SESSION['message'] = "Update berhasil!";
         header('Location: index.php');
         exit(0);
     }
