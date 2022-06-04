@@ -14,18 +14,18 @@ include "admin/config.php";
   <main>
       <section class="statistik">
             <div class="statistik-penduduk">
-            <?php
-                  $query = "SELECT * FROM penduduk ORDER BY id ASC";
-                  $result = mysqli_query($conn, $query);
-
-                  if(!$result) {
-                    die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
-                  }
-                  $no = 1;
-
-                  while ($row = mysqli_fetch_assoc($result)) {
-            ?>
                 <div class="row justify-content-center">
+                    <?php
+                            $query = "SELECT * FROM penduduk ORDER BY id ASC";
+                            $result = mysqli_query($conn, $query);
+
+                            if(!$result) {
+                                die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+                            }
+                            $no = 1;
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
                         <div class="col-md-3">
                             <div class="nilai">
                                 <div class="row">
@@ -40,10 +40,10 @@ include "admin/config.php";
                                     </div>
                                 </div>
                             </div>
-                            <?php
-                                }
-                            ?>
                         </div>
+                        <?php
+                            }
+                         ?>
                    
                 </div>
             </div>
@@ -104,17 +104,6 @@ include "admin/config.php";
 
             <div class="daftar-dusun">
                 <div class="container">
-                    <?php
-                    $query = "SELECT * FROM dusun_desa ORDER BY id ASC";
-                    $result = mysqli_query($conn, $query);
-
-                    if(!$result) {
-                        die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
-                    }
-                    $no = 1;
-
-                    while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
                     <div class="row">
                         <h3>Daftar Dusun</h3>
                     </div>
@@ -126,17 +115,28 @@ include "admin/config.php";
                                     <th>Nama Dusun</th>
                                     <th>Jumlah Penduduk</th>
                                 </tr>
+                                <?php
+                                    $query = "SELECT * FROM dusun_desa ORDER BY id ASC";
+                                    $result = mysqli_query($conn, $query);
+
+                                    if(!$result) {
+                                        die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+                                    }
+                                    $no = 1;
+
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
                                 <tr>
-                                    <td><?php echo $no; ?></td>
+                                    <td><?php echo $no++; ?></td>
                                     <td><?php echo $row['nama_dusun']; ?></td>
                                     <td><?php echo $row['jumlah_penduduk']; ?></td>
                                 </tr>
+                                <?php
+                                    }
+                                ?>
                             </table>
                         </div>
                     </div>
-                    <?php
-                        }
-                    ?>
                 </div>
             </div>
       </section>
