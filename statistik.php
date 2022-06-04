@@ -14,56 +14,37 @@ include "admin/config.php";
   <main>
       <section class="statistik">
             <div class="statistik-penduduk">
+            <?php
+                  $query = "SELECT * FROM penduduk ORDER BY id ASC";
+                  $result = mysqli_query($conn, $query);
+
+                  if(!$result) {
+                    die("Query Error : ".mysqli_errno($conn)." - ".mysqli_errno($conn));
+                  }
+                  $no = 1;
+
+                  while ($row = mysqli_fetch_assoc($result)) {
+            ?>
                 <div class="row justify-content-center">
-
                         <div class="col-md-3">
                             <div class="nilai">
                                 <div class="row">
-                                    <h5>Statistik Penduduk Pria</h5>
+                                    <h5><?php echo $row['jenis_data']; ?></h5>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col">
-                                        <img src="assets/img/statistik/pria.png" alt="">
+                                        <img src="admin/uploads/statistik/<?php echo $row['url_gambar']; ?>" alt="">
                                     </div>
                                     <div class="col">
-                                        <p>76</p>
+                                        <p><?php echo $row['jumlah']; ?></p>
                                     </div>
                                 </div>
                             </div>
+                            <?php
+                                }
+                            ?>
                         </div>
-
-                        <div class="col-md-3">
-                            <div class="nilai">
-                                <div class="row">
-                                    <h5>Statistik Penduduk Wanita</h5>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <img src="assets/img/statistik/wanita.png" alt="">
-                                    </div>
-                                    <div class="col">
-                                        <p>76</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="nilai">
-                                <div class="row">
-                                    <h5>Statistik Penduduk</h5>
-                                </div>
-                                <div class="row justify-content-center">
-                                        <div class="col">
-                                            <img src="assets/img/statistik/orang.png" alt="">
-                                        </div>
-                                        <div class="col">
-                                            <p>76</p>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    
+                   
                 </div>
             </div>
 
