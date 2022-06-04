@@ -171,6 +171,17 @@ h1, h2, h3, h4, h5, h6 {
 .navbar li {
   position: relative;
 }
+
+ul li.drp-hidden{
+  display: none;
+}
+
+@media (max-width:990px) {
+  ul li.drp-hidden{
+    display: inline-block;
+  }
+}
+
 .navbar > ul > li {
   position: relative;
   white-space: nowrap;
@@ -692,14 +703,14 @@ STATISTIK.HTML
   text-align: center;
 }
 
-.statistik .statistik-penduduk .col{
+/* .statistik .statistik-penduduk .col{
   padding: 70px;;
-}
+} */
 
 .statistik .statistik-penduduk p{
   font-weight: bold;
   margin: 0;
-  font-size: 6vh;
+  font-size: 30px;
   line-height: 70px;
   height: 70px;
   width: fit-content;
@@ -734,17 +745,24 @@ STATISTIK.HTML
   background-color: yellow;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 800px)  and (max-width: 900px) {
+  .statistik .statistik-penduduk .col-md-3{
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 900px) {
   .statistik .statistik-penduduk .col-md-3{
     background-color: #609773;
     width: fit-content;
     padding: 0 35px;
     border-radius: 25px;
     margin: 0 20px;
+    margin-top: 20px;
   }
   
   .statistik .statistik-penduduk img{
-    width: 100px;
+    width: 90px;
     margin: 0;
   }
   
@@ -765,16 +783,16 @@ STATISTIK.HTML
     padding: 0;
   }
   
-  .statistik .statistik-penduduk p{
+  .statistik .statistik-penduduk p {
     font-weight: bold;
     margin: 0;
-    font-size: 8vh;
+    font-size: 30px;
     line-height: 100px;
     height: 100px;
     width: fit-content;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     color: #fff;
-  }
+}
   
   .statistik .daftar-dusun table{
     margin: auto;

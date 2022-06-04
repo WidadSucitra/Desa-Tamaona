@@ -49,6 +49,7 @@
             <li><a class="nav-link scrollto" href="gallery.php">Galeri</a></li>
             <li class="dropdown active"><a href="potensi.php"><span>Potensi</span> <i class="bi bi-chevron-down panah"></i></a>
               <ul>
+                <li class="drp-hidden"><a href="potensi.php">Potensi Desa</a></li>
                 <li><a href="batas-wilayah.php">Wilayah</a></li>
                 <li><a href="sarana.php">Sarana</a></li>
                 <li><a href="potensi-wisata.php">Wisata</a></li>
