@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
               <div class="left">
                   <div class="left-container">
                       <h2>Tentang Kami</h2>
-                      <p>Desa Tamaona terletak di Kecamatan Kindang, Kabupaten Bulukumba, Provinsi Sulawesi Selatan, Indonesia. Untuk informasi lebih lanjut, silahkan hubungi kami.</p>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolores tenetur iure quisquam, repellat molestias laboriosam. Molestiae nesciunt veniam animi natus illum nobis, tenetur dicta tempore? Officiis vero consequuntur delectus.</p>
                   </div>
                   
               </div>
