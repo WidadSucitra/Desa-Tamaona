@@ -52,21 +52,21 @@ if (isset($_POST['submit']) && isset($_FILES['dokumentasi'])) {
                 <tr>
                     <td for="judul_pengaduan" class="title">Judul Pengaduan : </td>
                     <td>
-                        <input type="text" id="judul_pengaduan" name="judul_pengaduan" placeholder="Masukkan Judul Pengaduan">
+                        <input type="text" id="judul_pengaduan" name="judul_pengaduan" required placeholder="Masukkan Judul Pengaduan">
                     </td>
                 </tr>
 
                 <tr>
                     <td for="isi_pengaduan" class="title">Isi Pengaduan : </td>
                     <td>
-                        <textarea id="isi_pengaduan" name="isi_pengaduan" cols="30" rows="10" placeholder="Masukkan Isi Pengaduan"></textarea>
+                        <textarea id="isi_pengaduan" name="isi_pengaduan" cols="30" rows="10" required placeholder="Masukkan Isi Pengaduan"></textarea>
                     </td>
                 </tr>
 
                 <tr>
                     <td for="dokumentasi" class="title">Dokumentasi : </td>
                     <td>
-                        <input class="nobg" type="file" id="dokumentasi" name="dokumentasi">
+                        <input class="nobg" type="file" id="dokumentasi" name="dokumentasi" required>
                     </td>
                 </tr>
 
