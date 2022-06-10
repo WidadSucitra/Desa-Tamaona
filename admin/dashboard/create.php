@@ -63,11 +63,11 @@ if (isset($_POST['submit'])) {
           </div>
           <div class="mb-3">
             <label for="password" class="label-foto">password</label>
-            <input type="password" name="password" value="<?php echo $_POST["password"]; ?>" required>
+            <input type="password" name="password" placeholder="Masukkan password" required>
           </div>
           <div class="mb-3">
             <label for="cppassword" class="label-foto">confirm password</label>
-            <input type="password" name="cppassword" value="<?php echo $_POST["cppassword"]; ?>" required>
+            <input type="password" name="cppassword" placeholder="Konfirmasi password" required>
           </div>
 
           <button type="submit" class="btn btn-primary" name="submit" value="Upload">Submit</button>
