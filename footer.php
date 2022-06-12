@@ -12,7 +12,7 @@
             Kabupaten Bulukumba, 92517<br>
             Sulawesi Selatan, Indonesia <br><br>
             <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
+            <strong>Email:</strong> DesaTamaona1@gmail.com<br>
           </p>
         </div>
 
