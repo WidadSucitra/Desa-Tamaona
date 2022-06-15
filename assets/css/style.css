@@ -839,6 +839,8 @@ STATISTIK.HTML
 }
 .gallery .potensi-wilayah-batas.card {
   width: 15rem;
+  border-radius: 10px;
+  background-color: #609773;
 }
 .gallery .potensi-wilayah-batas .card-img-top {
   padding-bottom: 0;
@@ -846,7 +848,14 @@ STATISTIK.HTML
 .gallery .potensi-wilayah-batas .card-text {
   padding-top: 0;
   font-size: 15px;
+  color: #fff;
 }
+
+.gallery .potensi-wilayah-batas h5 {
+  color: #fff;
+  font-size: 18px;
+}
+
 
 @media (min-width: 800px) {
   .gallery {
@@ -2443,7 +2452,8 @@ section {
 }
 
 #profile .img-fluid {
-  margin-top: 10%;
+  margin-top: 7%;
+  border-radius: 6px;
 }
 
 .profile .row.container.justify-content-center{
