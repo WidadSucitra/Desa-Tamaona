@@ -184,7 +184,8 @@ if(isset($_POST['klik_delete'])){
                   </td>
                 </tr>
                 <?php
-                  }
+                $no++;  
+                }
                 ?>
               </tbody>
               </table>
@@ -238,7 +239,7 @@ if(isset($_POST['klik_delete'])){
                   </td>
                 </tr>
                 <?php
-                  }
+                  $no++; }
                 ?>
               </tbody>
               </table>

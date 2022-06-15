@@ -11,7 +11,7 @@
             Desa Tamaona, Kecamatan Kindang <br>
             Kabupaten Bulukumba, 92517<br>
             Sulawesi Selatan, Indonesia <br><br>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Phone:</strong>+62 812 4544 6865<br>
             <strong>Email:</strong> DesaTamaona1@gmail.com<br>
           </p>
         </div>
