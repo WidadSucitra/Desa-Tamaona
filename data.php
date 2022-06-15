@@ -14,5 +14,7 @@ while ($data = mysqli_fetch_assoc($result)) {
 }
 
 echo json_encode($array);
+
+echo ($data)
 ?>
 
